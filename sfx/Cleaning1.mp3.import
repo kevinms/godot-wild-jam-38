@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Cleaning1.mp3-38bf990123b91e3fcd9a8e66d4073589.mp3str"
+
+[deps]
+
+source_file="res://sfx/Cleaning1.mp3"
+dest_files=[ "res://.import/Cleaning1.mp3-38bf990123b91e3fcd9a8e66d4073589.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

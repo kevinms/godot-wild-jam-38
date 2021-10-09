@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/HitSound2.mp3-67b444f603ec5205eb5dce30fa00c853.mp3str"
+
+[deps]
+
+source_file="res://sfx/HitSound2.mp3"
+dest_files=[ "res://.import/HitSound2.mp3-67b444f603ec5205eb5dce30fa00c853.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

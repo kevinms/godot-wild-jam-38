@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/BackgroundTrack.mp3-e8628eadc6683b16030fc6f7708d2cb8.mp3str"
+
+[deps]
+
+source_file="res://sfx/BackgroundTrack.mp3"
+dest_files=[ "res://.import/BackgroundTrack.mp3-e8628eadc6683b16030fc6f7708d2cb8.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
