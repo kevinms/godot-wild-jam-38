@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Death.mp3-ab2afe57669d908e672bfd0b3d7ddf63.mp3str" ]
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

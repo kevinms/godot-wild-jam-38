@@ -1,31 +1,21 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://buildings/Building.tscn" type="PackedScene" id=1]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
+[ext_resource path="res://Game.gd" type="Script" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 250, 10 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 4 )
 
-[node name="Node2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 190.215, 228.925 )
-
-[node name="Node2D2" parent="." instance=ExtResource( 1 )]
-position = Vector2( 350.395, 197.556 )
-
-[node name="Node2D3" parent="." instance=ExtResource( 1 )]
-position = Vector2( 449.174, 231.595 )
-
-[node name="Node2D4" parent="." instance=ExtResource( 1 )]
-position = Vector2( 145.498, 250.95 )
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 181.698, 183.287 )
+current = true
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 181.698, 183.287 )
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-current = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2( 253.53, 313.234 )
@@ -36,3 +26,6 @@ shape = SubResource( 1 )
 [node name="Sprite" type="Sprite" parent="StaticBody2D"]
 scale = Vector2( 7.76, 0.28 )
 texture = ExtResource( 3 )
+
+[node name="SpawnLocation" type="Node2D" parent="."]
+position = Vector2( 135.222, 241.977 )

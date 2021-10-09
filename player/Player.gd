@@ -2,8 +2,8 @@ extends KinematicBody2D
 
 const MAX_SPEED = 200
 const ACCELERATION = 450
-const JUMP_SPEED = 300
-const GRAVITY = 700
+const JUMP_SPEED = 400 #300
+const GRAVITY = 800
 const FRICTION = 15
 
 var velocity = Vector2.ZERO
@@ -42,6 +42,7 @@ func _process(delta):
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
 			velocity.y -= JUMP_SPEED
+			$JumpSound.play()
 		if is_on_wall():
 			#TODO: wall jump
 			pass

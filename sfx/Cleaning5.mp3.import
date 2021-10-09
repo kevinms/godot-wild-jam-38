@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Cleaning5.mp3-252423de56578116cacff50bb5c39311.mp3st
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
