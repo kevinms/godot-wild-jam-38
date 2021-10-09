@@ -12,7 +12,7 @@ func is_player_dead():
 	var player_pos = $Player.global_position
 	
 	# Died by falling
-	if player_pos.y > $BuildingSpawner.global_position.y + 700:
+	if player_pos.y > $BuildingSpawner.global_position.y + 900:
 		return true
 	
 	return false
@@ -40,8 +40,13 @@ func move_camera(delta: float):
 	
 	$Camera2D.global_position = camera_pos
 	
-	var cloud_camera_offset = Vector2(0, camera_pos.y / get_viewport().size.y)
-	cloud_camera_offset = camera_pos / get_viewport().size
+	var view_size = Vector2(ProjectSettings.get("display/window/size/width"), ProjectSettings.get("display/window/size/height"))
+	print("view: ", view_size)
+	
+	#var cloud_camera_offset = camera_pos / get_viewport().size
+	var cloud_camera_offset = camera_pos / view_size
+	print(cloud_camera_offset)
+	
 	$Camera2D/CloudsBack.material.set_shader_param("camera_offset", cloud_camera_offset)
 	$Camera2D/CloudsFront.material.set_shader_param("camera_offset", cloud_camera_offset)
 

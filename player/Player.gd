@@ -1,14 +1,20 @@
 extends KinematicBody2D
 
 const MAX_SPEED = 200
+const MAX_SHAKE_SPEED = 1500
 const ACCELERATION = 550 #450
 const JUMP_SPEED = 400 #300
-const WALL_JUMP_SPEED = 300
+const WALL_JUMP_SPEED = 500
 const GRAVITY = 800
 const FRICTION = 15
 const AIR_FRICTION = 10
 
+const NUM_AIR_JUMPS = 1
+var air_jumps_left = NUM_AIR_JUMPS
+
 var velocity = Vector2.ZERO
+
+onready var camera = Global.get_camera()
 
 func get_input_dir():
 	var dir = Vector2.ZERO
@@ -38,24 +44,32 @@ func _process(delta):
 				#velocity.x -= AIR_FRICTION * delta * velocity.x
 				pass
 	
-	velocity += ACCELERATION * delta * dir
-	velocity.x = clamp(velocity.x, -MAX_SPEED, MAX_SPEED)
+	# Only apply input acceleration if velocity is below max
+	# Or, if apply in the opposite direction of acceleration
+	if abs(velocity.x) < MAX_SPEED or sign(velocity.x) != sign(dir.x):
+		#print("accelerating: ", velocity.x)
+		var scale_accel = 2.0 if $GrappleGun.is_attached() else 1.0
+		velocity += ACCELERATION * scale_accel * delta * dir
+	# Blanket clamping messes up the grappling hook
+	#velocity.x = clamp(velocity.x, -MAX_SPEED, MAX_SPEED)
 	
 	# Instant max speed
 	#velocity.x = dir.x * MAX_SPEED
 	
 	velocity.y += GRAVITY * delta
 	
-	# Spring
-	velocity += $GrappleGun.compute_spring_force() * delta
-	
 	# Rope
-	#velocity += $GrappleGun.compute_rope_force(velocity)
-	#if $GrappleGun.is_attached():
-	#	# bad
-	#	velocity *= 1.01
+	velocity += $GrappleGun.compute_rope_force(velocity)
+	
+	# Spring
+	velocity += $GrappleGun.compute_spring_force() * 10.0 * delta
 	
 	velocity = move_and_slide(velocity, Vector2.UP, true)
+	
+	if get_slide_count() > 0:
+		air_jumps_left = NUM_AIR_JUMPS
+	
+	shake_camera()
 	
 	if is_on_wall() and !$GrappleGun.is_attached():
 		velocity.y = 0
@@ -64,8 +78,12 @@ func _process(delta):
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
 			print("on ground")
-			velocity.y -= JUMP_SPEED
+			# Straight up
+			#velocity.y -= JUMP_SPEED
+			# Up and to the dir
+			velocity += (dir*0.3 + Vector2.UP).normalized() * JUMP_SPEED
 			$JumpSound.play()
+			#camera.add_trauma(0.2)
 		elif is_on_wall():
 			print("on wall")
 			var wall_normal = Vector2.RIGHT
@@ -75,3 +93,22 @@ func _process(delta):
 			var jump_dir = Vector2.UP + wall_normal * 0.3
 			velocity = WALL_JUMP_SPEED * jump_dir
 			$JumpSound.play()
+			#camera.add_trauma(0.2)
+		elif Input.is_action_just_pressed("jump") and air_jumps_left > 0:
+			print("on air")
+			velocity.y = min(0, velocity.y) - JUMP_SPEED
+			$JumpSound.play()
+			air_jumps_left -= 1
+
+var was_in_air = false
+var was_velocity: Vector2
+func shake_camera():
+	#if get_slide_count() > 0:
+	if is_on_floor():
+		if was_in_air:
+			camera.add_trauma(was_velocity.length() / MAX_SHAKE_SPEED)
+		was_in_air = false
+	else:
+		was_in_air = true
+
+	was_velocity = velocity

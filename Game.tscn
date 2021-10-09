@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://sfx/FallDeath.mp3" type="AudioStream" id=1]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://sfx/BackgroundTrack.mp3" type="AudioStream" id=7]
 [ext_resource path="res://sky/CloudsRealistic.tres" type="Material" id=8]
 [ext_resource path="res://sky/CloudsRealistic.gdshader" type="Shader" id=9]
+[ext_resource path="res://Camera2D.gd" type="Script" id=10]
 
 [sub_resource type="OpenSimplexNoise" id=1]
 seed = 2
@@ -22,6 +23,7 @@ noise = SubResource( 1 )
 
 [sub_resource type="ShaderMaterial" id=3]
 shader = ExtResource( 9 )
+shader_param/render_sky = false
 shader_param/camera_offset = Vector2( 2.337, 0.38 )
 shader_param/cloud_offset = Vector2( 0, 0 )
 shader_param/sky_color = Color( 0.0509804, 0.694118, 0.843137, 1 )
@@ -42,12 +44,14 @@ script = ExtResource( 4 )
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2( 181.698, 183.287 )
 current = true
+script = ExtResource( 10 )
 
 [node name="GameOver" parent="Camera2D" instance=ExtResource( 5 )]
 visible = false
 z_index = 42
 
 [node name="Sky" type="ColorRect" parent="Camera2D"]
+visible = false
 margin_left = -513.0
 margin_top = -303.0
 margin_right = 514.0
@@ -67,7 +71,7 @@ texture = ExtResource( 3 )
 material = SubResource( 3 )
 position = Vector2( 0.420472, 1.26135 )
 scale = Vector2( 16.0704, 9.4221 )
-z_index = 42
+z_index = 41
 texture = ExtResource( 3 )
 
 [node name="Sky2" type="TextureRect" parent="Camera2D"]
@@ -92,13 +96,15 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="TestPlank" type="StaticBody2D" parent="."]
 position = Vector2( 253.53, 313.234 )
+collision_layer = 2
+collision_mask = 3
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestPlank"]
 shape = SubResource( 4 )
 
-[node name="Sprite" type="Sprite" parent="StaticBody2D"]
+[node name="Sprite" type="Sprite" parent="TestPlank"]
 scale = Vector2( 7.76, 0.28 )
 texture = ExtResource( 3 )
 

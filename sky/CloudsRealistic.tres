@@ -14,8 +14,9 @@ noise = SubResource( 1 )
 
 [resource]
 shader = ExtResource( 1 )
+shader_param/render_sky = true
 shader_param/camera_offset = Vector2( -0.005, -0.633 )
 shader_param/cloud_offset = Vector2( 0, 0 )
-shader_param/sky_color = Color( 0.0509804, 0.694118, 0.843137, 1 )
+shader_param/sky_color = Color( 0.14902, 0.654902, 0.807843, 1 )
 shader_param/cloud_color = Color( 0.929412, 0.929412, 0.929412, 1 )
 shader_param/noise = SubResource( 2 )
