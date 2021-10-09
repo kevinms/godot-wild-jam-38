@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+[node name="Food" type="Area2D"]
+collision_layer = 4
+collision_mask = 7
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 1 )
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color( 0.0666667, 0.788235, 0.317647, 1 )
+polygon = PoolVector2Array( 10.0614, -9.86963, 10.0283, 10.0946, -10.0022, 10.1277, -10.0022, -9.93585 )
