@@ -58,12 +58,13 @@ default_length = 7.0
 
 [node name="LeftArm" type="Bone2D" parent="Skeleton2D/Torso"]
 position = Vector2( -0.075179, -7.96241 )
+rotation = -1.0472
 rest = Transform2D( 1, 0, 0, 1, -0.110257, -7.96241 )
 default_length = 4.0
 
 [node name="LeftFormArm" type="Bone2D" parent="Skeleton2D/Torso/LeftArm"]
 position = Vector2( -3.9389, 0.0629168 )
-rotation = -3.14159
+rotation = -3.66519
 rest = Transform2D( -1, -4.44253e-06, 4.44253e-06, -1, -4.00905, 0.0278406 )
 default_length = 4.0
 
@@ -80,11 +81,13 @@ default_length = 6.0
 
 [node name="RightArm" type="Bone2D" parent="Skeleton2D/Torso"]
 position = Vector2( -0.0278416, -7.96241 )
+rotation = 1.0472
 rest = Transform2D( 1, 0, 0, 1, -0.0278416, -7.96241 )
 default_length = 4.0
 
 [node name="RightForeArm" type="Bone2D" parent="Skeleton2D/Torso/RightArm"]
 position = Vector2( 4.31529, 0.0206041 )
+rotation = 0.523598
 rest = Transform2D( 1, 0, 0, 1, 4.31529, 0.0556812 )
 default_length = 4.0
 
@@ -181,4 +184,6 @@ texture = ExtResource( 4 )
 skeleton = NodePath("../../Skeleton2D")
 polygon = PoolVector2Array( 321, 988, 351, 975, 351, 933, 349, 788, 325, 777, 297, 785, 299, 963, 302, 983 )
 uv = PoolVector2Array( 321, 988, 351, 975, 351, 933, 349, 788, 325, 777, 297, 785, 299, 963, 302, 983 )
-bones = [ NodePath("Torso"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/LeftArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/LeftArm/LeftFormArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightLeg"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightLeg/RightCalf"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightArm/RightForeArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/LeftLeg"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/LeftLeg/LeftCalf"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ) ]
+bones = [ NodePath("Torso"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/LeftArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/LeftArm/LeftFormArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightLeg"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightLeg/RightCalf"), PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ), NodePath("Torso/RightArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightArm/RightForeArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/LeftLeg"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/LeftLeg/LeftCalf"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0 ) ]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
