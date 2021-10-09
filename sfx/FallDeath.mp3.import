@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/FallDeath.mp3-39d2a8508c5027a651ef53be8926a9b0.mp3str"
+
+[deps]
+
+source_file="res://sfx/FallDeath.mp3"
+dest_files=[ "res://.import/FallDeath.mp3-39d2a8508c5027a651ef53be8926a9b0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
