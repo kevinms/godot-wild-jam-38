@@ -47,11 +47,12 @@ func _process(delta):
 	velocity.y += GRAVITY * delta
 	
 	# Spring
-	#velocity += $GrappleGun.compute_spring_force() * delta
+	velocity += $GrappleGun.compute_spring_force() * delta
 	
 	# Rope
-	velocity += $GrappleGun.compute_rope_force(velocity)
+	#velocity += $GrappleGun.compute_rope_force(velocity)
 	#if $GrappleGun.is_attached():
+	#	# bad
 	#	velocity *= 1.01
 	
 	velocity = move_and_slide(velocity, Vector2.UP, true)

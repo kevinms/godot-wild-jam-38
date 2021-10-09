@@ -956,20 +956,18 @@ rotation = -0.00752499
 [node name="Torso" type="Bone2D" parent="Skeleton2D"]
 position = Vector2( 0.0278416, 1.19714 )
 rotation = 0.0028718
-scale = Vector2( 1, 1 )
 rest = Transform2D( 1, 0, 0, 1, 0.0278416, 1.19714 )
 default_length = 7.0
 
 [node name="LeftArm" type="Bone2D" parent="Skeleton2D/Torso"]
 position = Vector2( -0.075179, -8.01497 )
-rotation = -2.26269
+rotation = -1.99708
 rest = Transform2D( 1, 0, 0, 1, -0.110257, -7.96241 )
 default_length = 4.0
 
 [node name="LeftFormArm" type="Bone2D" parent="Skeleton2D/Torso/LeftArm"]
 position = Vector2( -3.9389, 0.0629168 )
-rotation = -4.05687
-scale = Vector2( 1, 1 )
+rotation = -4.36502
 rest = Transform2D( -1, -4.44253e-06, 4.44253e-06, -1, -4.00905, 0.0278406 )
 default_length = 4.0
 
@@ -981,32 +979,31 @@ default_length = 4.0
 
 [node name="RightCalf" type="Bone2D" parent="Skeleton2D/Torso/RightLeg"]
 position = Vector2( -0.00723833, 5.79084 )
-rotation = 2.86859
+rotation = 3.30469
 rest = Transform2D( 2.22127e-06, 1, -1, 2.22127e-06, 0.0278378, 5.79084 )
 default_length = 6.0
 
 [node name="RightArm" type="Bone2D" parent="Skeleton2D/Torso"]
 position = Vector2( 0.0247135, -8.01497 )
-rotation = -0.0142303
+rotation = 0.370596
 rest = Transform2D( 1, 0, 0, 1, -0.0278416, -7.96241 )
 default_length = 4.0
 
 [node name="RightForeArm" type="Bone2D" parent="Skeleton2D/Torso/RightArm"]
 position = Vector2( 4.31529, 0.0206041 )
-rotation = -0.911318
+rotation = -1.23363
 rest = Transform2D( 1, 0, 0, 1, 4.31529, 0.0556812 )
 default_length = 4.0
 
 [node name="LeftLeg" type="Bone2D" parent="Skeleton2D/Torso"]
 position = Vector2( -0.835218, 0.167044 )
-rotation = -0.706636
-scale = Vector2( 1, 1 )
+rotation = 0.320483
 rest = Transform2D( 1, 0, 0, 1, -0.835218, 0.167044 )
 default_length = 4.0
 
 [node name="LeftCalf" type="Bone2D" parent="Skeleton2D/Torso/LeftLeg"]
 position = Vector2( 0.0278378, 5.79084 )
-rotation = 1.67885
+rotation = 1.81691
 rest = Transform2D( 2.22127e-06, 1, -1, 2.22127e-06, 0.0278378, 5.79084 )
 default_length = 6.0
 

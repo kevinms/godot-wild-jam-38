@@ -39,6 +39,11 @@ func move_camera(delta: float):
 	camera_pos.y = lerp(camera_pos.y, player_pos.y, 5.0*delta)
 	
 	$Camera2D.global_position = camera_pos
+	
+	var cloud_camera_offset = Vector2(0, camera_pos.y / get_viewport().size.y)
+	cloud_camera_offset = camera_pos / get_viewport().size
+	$Camera2D/CloudsBack.material.set_shader_param("camera_offset", cloud_camera_offset)
+	$Camera2D/CloudsFront.material.set_shader_param("camera_offset", cloud_camera_offset)
 
 func _process(delta):
 	if Global.game_over:

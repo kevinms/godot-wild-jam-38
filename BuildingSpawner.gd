@@ -1,7 +1,14 @@
 extends Node2D
 
-onready var building_scene = preload("res://buildings/Building.tscn")
-var buildingSize: Vector2
+onready var building_scenes = [
+	preload("res://buildings/Building1.tscn"),
+	preload("res://buildings/Building2.tscn"),
+	preload("res://buildings/Building3.tscn"),
+	preload("res://buildings/Building4.tscn"),
+	preload("res://buildings/Building5.tscn"),
+	preload("res://buildings/Building6.tscn"),
+]
+var building_sizes = []
 
 export(NodePath) var camera_path
 onready var camera: Camera2D = get_node(camera_path)
@@ -9,24 +16,24 @@ onready var camera: Camera2D = get_node(camera_path)
 onready var base_pos = global_position
 onready var pos = base_pos
 
-func spawn_building(pos: Vector2):
-	var building = building_scene.instance()
-	add_child(building)
-	
-	building.global_position = pos
-
 func randomly_place_building():
-	var xscale = rand_range(1.0, 3.0)
-	pos.x += buildingSize.x * xscale
+	var index = randi() % building_scenes.size()
+	var building = building_scenes[index].instance()
+	var building_size = building.get_size_in_pixels()
+	
+	var xscale = rand_range(1.0, 2.0)
+	pos.x += building_size.x * xscale
 	pos.y = base_pos.y + rand_range(-300, 300)
 	
-	spawn_building(pos)
+	# Spawn
+	add_child(building)
+	building.global_position = pos
 
 func _ready():
-	var building = building_scene.instance()
-	buildingSize = building.get_size_in_pixels()
+	#var building = building_scenes[0].instance()
+	#building_sizes.append(building.get_size_in_pixels())
+	#print(building_sizes[0])
 	
-	print(buildingSize)
 	for i in range(2):
 		randomly_place_building()
 

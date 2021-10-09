@@ -1,7 +1,7 @@
 extends KinematicBody2D
 
-const MAX_DISTANCE = 250
-const SPEED = 600
+const MAX_DISTANCE = 350
+const SPEED = 900
 
 var dir: Vector2
 var gun: Node2D
