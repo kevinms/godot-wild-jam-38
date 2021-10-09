@@ -57,7 +57,7 @@ rest = Transform2D( 1, 0, 0, 1, 0.0278416, 1.19714 )
 default_length = 7.0
 
 [node name="LeftArm" type="Bone2D" parent="Skeleton2D/Torso"]
-position = Vector2( -0.075179, -7.96241 )
+position = Vector2( -0.075179, -8.01497 )
 rotation = -1.0472
 rest = Transform2D( 1, 0, 0, 1, -0.110257, -7.96241 )
 default_length = 4.0
@@ -112,7 +112,7 @@ texture = ExtResource( 4 )
 skeleton = NodePath("../../Skeleton2D")
 polygon = PoolVector2Array( 329, 169, 427, 179, 423, 322, 453, 325, 451, 492, 407, 492, 408, 569, 388, 590, 357, 588, 334, 565, 337, 487, 289, 488, 295, 310, 322, 316 )
 uv = PoolVector2Array( 329, 169, 427, 179, 423, 322, 453, 325, 451, 492, 407, 492, 408, 569, 388, 590, 357, 588, 334, 565, 337, 487, 289, 488, 295, 310, 322, 316 )
-bones = [ NodePath("Torso"), PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ), NodePath("Torso/LeftArm"), PoolRealArray( 0, 0, 0.5, 0.5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.5 ), NodePath("Torso/LeftArm/LeftFormArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightLeg"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightLeg/LeftCalf"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightArm/RightForeArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/LeftLeg"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/LeftLeg/RightCalf"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
+bones = [ NodePath("Torso"), PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ), NodePath("Torso/LeftArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0.54, 0.54 ), NodePath("Torso/LeftArm/LeftFormArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightLeg"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0.54, 0.54, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightLeg/RightCalf"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightArm"), PoolRealArray( 0, 0, 0.54, 0.54, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightArm/RightForeArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/LeftLeg"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0.54, 0.54, 0, 0, 0, 0 ), NodePath("Torso/LeftLeg/LeftCalf"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
 
 [node name="LeftArm" type="Polygon2D" parent="Polygons"]
 position = Vector2( 4.22174, -9.04462 )
@@ -151,7 +151,7 @@ uv = PoolVector2Array( -16, 108, 155, 111, 170, 135, 150, 159, 1, 157, -8, 135, 
 bones = [ NodePath("Torso"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/LeftArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/LeftArm/LeftFormArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightLeg"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightLeg/RightCalf"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightArm/RightForeArm"), PoolRealArray( 1, 1, 1, 1, 1, 1, 1 ), NodePath("Torso/LeftLeg"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/LeftLeg/LeftCalf"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0 ) ]
 
 [node name="LeftThigh" type="Polygon2D" parent="Polygons"]
-position = Vector2( 3.27692, -16.4928 )
+position = Vector2( 3.32947, -16.4928 )
 scale = Vector2( 0.0320318, 0.0340179 )
 texture = ExtResource( 4 )
 skeleton = NodePath("../../Skeleton2D")
