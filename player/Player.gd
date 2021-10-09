@@ -34,21 +34,29 @@ func _process(delta):
 		if is_on_floor():
 			velocity.x -= FRICTION * delta * velocity.x
 		else:
-			velocity.x -= AIR_FRICTION * delta * velocity.x
+			if !$GrappleGun.is_attached():
+				#velocity.x -= AIR_FRICTION * delta * velocity.x
+				pass
 	
 	velocity += ACCELERATION * delta * dir
 	velocity.x = clamp(velocity.x, -MAX_SPEED, MAX_SPEED)
-	
-	velocity += $GrappleGun.compute_force() * delta
 	
 	# Instant max speed
 	#velocity.x = dir.x * MAX_SPEED
 	
 	velocity.y += GRAVITY * delta
 	
+	# Spring
+	#velocity += $GrappleGun.compute_spring_force() * delta
+	
+	# Rope
+	velocity += $GrappleGun.compute_rope_force(velocity)
+	#if $GrappleGun.is_attached():
+	#	velocity *= 1.01
+	
 	velocity = move_and_slide(velocity, Vector2.UP, true)
 	
-	if is_on_wall():
+	if is_on_wall() and !$GrappleGun.is_attached():
 		velocity.y = 0
 	
 	# Jump

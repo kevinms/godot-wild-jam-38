@@ -6,7 +6,8 @@ const SPEED = 600
 var dir: Vector2
 var gun: Node2D
 
-var hooked = false
+var attached: bool = false
+var attached_length: float = 0
 
 signal hook_missed
 
@@ -20,7 +21,7 @@ func _process(delta):
 	$Line2D.add_point(to_local(global_position))
 	$Line2D.width = 20
 	
-	if hooked:
+	if attached:
 		return
 	
 	var distance = (global_position - gun.global_position).length()
@@ -31,4 +32,7 @@ func _process(delta):
 	
 	var collided = move_and_collide(dir * SPEED * delta)
 	
-	hooked = collided != null
+	if collided != null:
+		$HitSound.play()
+		attached = true
+		attached_length = (global_position - gun.global_position).length()
