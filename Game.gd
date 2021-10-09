@@ -28,19 +28,22 @@ func do_game_over():
 	$Camera2D/GameOver.visible = true
 
 func move_camera(delta: float):
+	var view_size = Vector2(ProjectSettings.get("display/window/size/width"), ProjectSettings.get("display/window/size/height"))
+	
 	var camera_pos = $Camera2D.global_position
 	var player_pos = $Player.global_position
+	
+	# Look farther ahead based on player's velocity
+	player_pos.x += clamp($Player.velocity.x*0.8, -view_size.x/2, view_size.x/2)
 	
 	#TODO: increase camera speed over time, but set a limit so players can go infinite
 	#camera_pos.x += 200 * delta
 	if player_pos.x > camera_pos.x:
-		camera_pos.x = lerp(camera_pos.x, player_pos.x, 2.0*delta)
+		camera_pos.x = lerp(camera_pos.x, player_pos.x, 3.0*delta)
 		
 	camera_pos.y = lerp(camera_pos.y, player_pos.y, 5.0*delta)
 	
 	$Camera2D.global_position = camera_pos
-	
-	var view_size = Vector2(ProjectSettings.get("display/window/size/width"), ProjectSettings.get("display/window/size/height"))
 	
 	#var cloud_camera_offset = camera_pos / get_viewport().size
 	var cloud_camera_offset = camera_pos / view_size
