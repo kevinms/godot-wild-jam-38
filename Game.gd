@@ -32,7 +32,7 @@ func move_camera(delta: float):
 	var player_pos = $Player.global_position
 	
 	#TODO: increase camera speed over time, but set a limit so players can go infinite
-	#camera_pos.x += 100 * delta
+	#camera_pos.x += 200 * delta
 	if player_pos.x > camera_pos.x:
 		camera_pos.x = lerp(camera_pos.x, player_pos.x, 2.0*delta)
 		
@@ -41,11 +41,9 @@ func move_camera(delta: float):
 	$Camera2D.global_position = camera_pos
 	
 	var view_size = Vector2(ProjectSettings.get("display/window/size/width"), ProjectSettings.get("display/window/size/height"))
-	print("view: ", view_size)
 	
 	#var cloud_camera_offset = camera_pos / get_viewport().size
 	var cloud_camera_offset = camera_pos / view_size
-	print(cloud_camera_offset)
 	
 	$Camera2D/CloudsBack.material.set_shader_param("camera_offset", cloud_camera_offset)
 	$Camera2D/CloudsFront.material.set_shader_param("camera_offset", cloud_camera_offset)

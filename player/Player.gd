@@ -103,12 +103,11 @@ func _process(delta):
 var was_in_air = false
 var was_velocity: Vector2
 func shake_camera():
-	#if get_slide_count() > 0:
-	if is_on_floor():
+	if get_slide_count() > 0:
+	#if is_on_floor():
 		if was_in_air:
 			camera.add_trauma(was_velocity.length() / MAX_SHAKE_SPEED)
 		was_in_air = false
 	else:
 		was_in_air = true
-
 	was_velocity = velocity

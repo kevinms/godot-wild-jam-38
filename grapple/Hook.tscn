@@ -2,7 +2,7 @@
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://grapple/Hook.gd" type="Script" id=2]
-[ext_resource path="res://sfx/Fruit1.mp3" type="AudioStream" id=3]
+[ext_resource path="res://sfx/HitSound2.mp3" type="AudioStream" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 30.8832, 31.4523 )
@@ -26,3 +26,4 @@ antialiased = true
 
 [node name="HitSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+volume_db = -16.0

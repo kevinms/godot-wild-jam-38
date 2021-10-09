@@ -10,11 +10,21 @@ onready var building_scenes = [
 ]
 var building_sizes = []
 
+onready var balloon_scene = preload("res://balloon/Balloon.tscn")
+
 export(NodePath) var camera_path
 onready var camera: Camera2D = get_node(camera_path)
 
 onready var base_pos = global_position
 onready var pos = base_pos
+
+func randomly_place_balloons(base):
+	var balloon = balloon_scene.instance()
+	var balloon_pos = base
+	balloon_pos.y += rand_range(-300, -500)
+	
+	add_child(balloon)
+	balloon.global_position = balloon_pos
 
 func randomly_place_building():
 	var index = randi() % building_scenes.size()
@@ -23,7 +33,9 @@ func randomly_place_building():
 	
 	var xscale = rand_range(1.0, 2.0)
 	pos.x += building_size.x * xscale
-	pos.y = base_pos.y + rand_range(-300, 300)
+	pos.y = base_pos.y + rand_range(-200, 200)
+	
+	randomly_place_balloons(pos + Vector2(0, -building_size.y/2))
 	
 	# Spawn
 	add_child(building)

@@ -1179,6 +1179,7 @@ nodes/WallJump/position = Vector2( 300, 540 )
 nodes/output/position = Vector2( 1340, 180 )
 
 [node name="Player" type="KinematicBody2D"]
+z_index = 1
 collision_mask = 7
 script = ExtResource( 2 )
 
