@@ -17,6 +17,12 @@ void fragment() {
 	clouds *= texture(noise, UV+vec2(0, TIME*speed)+offset).x;
 	clouds *= 1.2;
 	
+	// Clamp so clouds don't blow out in the center
+	//clouds = clamp(clouds, 0, .45);
+	
+	// Scale so clouds don't c
+	clouds = clouds * 0.3 + .3;
+	
 	if (render_sky) {
 		// Mix with sky color
 		//col = mix(sky_color, sky_color*0.1, UV.y + camera_offset.y - 1.0);

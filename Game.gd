@@ -12,7 +12,7 @@ func is_player_dead():
 	var player_pos = $Player.global_position
 	
 	# Died by falling
-	if player_pos.y > $BuildingSpawner.global_position.y + 900:
+	if player_pos.y > $LevelSpawner.global_position.y + 900:
 		return true
 	
 	return false

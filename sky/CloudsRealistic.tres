@@ -10,8 +10,6 @@ persistence = 0.475
 
 [sub_resource type="NoiseTexture" id=2]
 seamless = true
-as_normalmap = true
-bump_strength = 8.7
 noise = SubResource( 1 )
 
 [resource]
