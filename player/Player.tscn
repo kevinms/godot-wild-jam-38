@@ -1632,7 +1632,7 @@ node_connections = [ "action", 0, "Standing", "action", 1, "Running", "action", 
 
 [node name="Player" type="KinematicBody2D"]
 z_index = 1
-collision_mask = 7
+collision_mask = 15
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

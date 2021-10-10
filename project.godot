@@ -77,6 +77,7 @@ fire={
 2d_physics/layer_1="player"
 2d_physics/layer_2="buildings"
 2d_physics/layer_3="pickups"
+2d_physics/layer_4="hazards"
 
 [physics]
 

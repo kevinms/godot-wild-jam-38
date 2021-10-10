@@ -7,6 +7,9 @@ var distance = 0
 var food = 0
 var clean = 0
 
+signal player_died
+signal windturbine_hit
+
 func reset():
 	game_over = false
 	

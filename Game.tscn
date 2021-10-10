@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://sfx/FallDeath.mp3" type="AudioStream" id=1]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
@@ -12,6 +12,7 @@
 [ext_resource path="res://Camera2D.gd" type="Script" id=10]
 [ext_resource path="res://sky/Background.png" type="Texture" id=11]
 [ext_resource path="res://buildings/Building1.tscn" type="PackedScene" id=12]
+[ext_resource path="res://windturbine/WindTurbine.tscn" type="PackedScene" id=13]
 
 [sub_resource type="OpenSimplexNoise" id=1]
 seed = 2
@@ -33,7 +34,7 @@ shader_param/cloud_color = Color( 0.929412, 0.929412, 0.929412, 1 )
 shader_param/speed = 0.05
 shader_param/noise = SubResource( 2 )
 
-[sub_resource type="Environment" id=5]
+[sub_resource type="Environment" id=4]
 background_mode = 4
 ambient_light_color = Color( 0.203922, 0.85098, 0.113725, 1 )
 tonemap_mode = 2
@@ -112,7 +113,7 @@ volume_db = -16.0
 autoplay = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 5 )
+environment = SubResource( 4 )
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -128,5 +129,8 @@ region_rect = Rect2( 0, 0, 9000, 9000 )
 
 [node name="Starting Building" parent="." instance=ExtResource( 12 )]
 position = Vector2( 322.74, 414.028 )
+
+[node name="WindMill" parent="." instance=ExtResource( 13 )]
+position = Vector2( 375.069, 203.125 )
 
 [connection signal="screen_exited" from="Player/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

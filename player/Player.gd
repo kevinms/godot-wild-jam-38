@@ -17,8 +17,17 @@ var velocity = Vector2.ZERO
 onready var camera = Global.get_camera()
 onready var GrappleGun = $Node2D/GrappleGun
 
+func _ready():
+	Global.connect("windturbine_hit", self, "on_windturbine_hit")
+
+func on_windturbine_hit():
+	velocity = (Vector2.RIGHT + Vector2.UP) * 1000.0
+
 func get_input_dir():
 	var dir = Vector2.ZERO
+	
+	if Global.game_over:
+		return dir
 	
 	if Input.is_action_pressed("left"):
 		dir += Vector2.LEFT

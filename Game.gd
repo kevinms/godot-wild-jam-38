@@ -2,6 +2,7 @@ extends Node2D
 
 func _ready():
 	Global.reset()
+	Global.connect("windturbine_hit", self, "on_windturbine_hit")
 	$Camera2D/GameOver.visible = false
 
 func process_game_over():
@@ -62,4 +63,7 @@ func _process(delta):
 		do_game_over()
 
 func _on_VisibilityNotifier2D_screen_exited():
+	do_game_over()
+
+func on_windturbine_hit():
 	do_game_over()
