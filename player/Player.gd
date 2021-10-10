@@ -14,6 +14,7 @@ var air_jumps_left = NUM_AIR_JUMPS
 
 var velocity = Vector2.ZERO
 
+
 onready var camera = Global.get_camera()
 onready var GrappleGun = $Node2D/GrappleGun
 
@@ -22,6 +23,8 @@ func _ready():
 
 func on_windturbine_hit():
 	velocity = (Vector2.RIGHT + Vector2.UP) * 1000.0
+	$AnimationTree.set("parameters/action/current",8)
+
 
 func get_input_dir():
 	var dir = Vector2.ZERO

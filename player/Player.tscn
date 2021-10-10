@@ -9,7 +9,7 @@
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6.77242, 13.2984 )
 
-[sub_resource type="Animation" id=18]
+[sub_resource type="Animation" id=2]
 resource_name = "DeathCurl"
 tracks/0/type = "value"
 tracks/0/path = NodePath("Node2D/Skeleton2D:position")
@@ -252,8 +252,7 @@ tracks/19/keys = {
 "values": [ 0.164542, 0.164542, -15.0, -30.0, -59.9999, -74.9999, -89.9999 ]
 }
 
-[sub_resource type="Animation" id=2]
-resource_name = "Falling"
+[sub_resource type="Animation" id=3]
 length = 0.2
 step = 0.2
 tracks/0/type = "value"
@@ -473,8 +472,7 @@ tracks/17/keys = {
 "values": [ 0.164542, -15.0 ]
 }
 
-[sub_resource type="Animation" id=3]
-resource_name = "JumpKick"
+[sub_resource type="Animation" id=4]
 length = 0.3
 tracks/0/type = "value"
 tracks/0/path = NodePath("Node2D/Skeleton2D/Torso/LeftLeg:position")
@@ -693,7 +691,7 @@ tracks/17/keys = {
 "values": [ 0.164542, 0.164542, -26.2334 ]
 }
 
-[sub_resource type="Animation" id=4]
+[sub_resource type="Animation" id=5]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Node2D/Skeleton2D/Torso/LeftLeg:position")
@@ -912,7 +910,7 @@ tracks/17/keys = {
 "values": [ 0.164542, 0.164542 ]
 }
 
-[sub_resource type="Animation" id=5]
+[sub_resource type="Animation" id=6]
 length = 0.001
 tracks/0/type = "value"
 tracks/0/path = NodePath("Node2D/Skeleton2D/Torso/LeftLeg/LeftCalf:position")
@@ -1131,7 +1129,7 @@ tracks/17/keys = {
 "values": [ 0.164542 ]
 }
 
-[sub_resource type="Animation" id=19]
+[sub_resource type="Animation" id=7]
 resource_name = "Ragdoll"
 length = 3.0
 tracks/0/type = "value"
@@ -1375,7 +1373,7 @@ tracks/19/keys = {
 "values": [ 0.164542, -270.0, 0.164542, -180.0, -105.0, -270.0, -105.0, -270.0, -270.0, -270.0, -105.0, 0.0, -180.0, -89.9999, -180.0, -105.0, -105.0, -270.0, -270.0, -180.0, -105.0, -105.0, -270.0, -270.0 ]
 }
 
-[sub_resource type="Animation" id=6]
+[sub_resource type="Animation" id=8]
 length = 0.6
 loop = true
 tracks/0/type = "value"
@@ -1595,7 +1593,7 @@ tracks/17/keys = {
 "values": [ 43.2306, -74.4417, 43.2306 ]
 }
 
-[sub_resource type="Animation" id=7]
+[sub_resource type="Animation" id=9]
 length = 0.1
 tracks/0/type = "value"
 tracks/0/path = NodePath("Node2D/Skeleton2D:position")
@@ -1838,7 +1836,7 @@ tracks/19/keys = {
 "values": [ 0.164542 ]
 }
 
-[sub_resource type="Animation" id=8]
+[sub_resource type="Animation" id=10]
 length = 0.2
 tracks/0/type = "value"
 tracks/0/path = NodePath("Node2D/Skeleton2D/Torso/LeftLeg/LeftCalf:position")
@@ -2057,34 +2055,34 @@ tracks/17/keys = {
 "values": [ 0.164542 ]
 }
 
-[sub_resource type="AnimationNodeAnimation" id=9]
+[sub_resource type="AnimationNodeAnimation" id=11]
 animation = "Falling"
 
-[sub_resource type="AnimationNodeAnimation" id=20]
+[sub_resource type="AnimationNodeAnimation" id=12]
 animation = "DeathCurl"
 
-[sub_resource type="AnimationNodeAnimation" id=10]
+[sub_resource type="AnimationNodeAnimation" id=13]
 animation = "JumpKick"
 
-[sub_resource type="AnimationNodeAnimation" id=11]
+[sub_resource type="AnimationNodeAnimation" id=14]
 animation = "Jumping"
 
-[sub_resource type="AnimationNodeAnimation" id=12]
+[sub_resource type="AnimationNodeAnimation" id=15]
 animation = "OnWall"
 
-[sub_resource type="AnimationNodeAnimation" id=21]
+[sub_resource type="AnimationNodeAnimation" id=16]
 animation = "Ragdoll"
 
-[sub_resource type="AnimationNodeAnimation" id=13]
+[sub_resource type="AnimationNodeAnimation" id=17]
 animation = "Running"
 
-[sub_resource type="AnimationNodeAnimation" id=14]
+[sub_resource type="AnimationNodeAnimation" id=18]
 animation = "Standing"
 
-[sub_resource type="AnimationNodeAnimation" id=15]
+[sub_resource type="AnimationNodeAnimation" id=19]
 animation = "WallJump"
 
-[sub_resource type="AnimationNodeTransition" id=16]
+[sub_resource type="AnimationNodeTransition" id=20]
 input_count = 9
 xfade_time = 0.3
 input_0/name = "Standing"
@@ -2106,26 +2104,27 @@ input_7/auto_advance = false
 input_8/name = "state 8"
 input_8/auto_advance = false
 
-[sub_resource type="AnimationNodeBlendTree" id=17]
-nodes/Animation/node = SubResource( 9 )
+[sub_resource type="AnimationNodeBlendTree" id=21]
+graph_offset = Vector2( 0, 458.5 )
+nodes/Animation/node = SubResource( 11 )
 nodes/Animation/position = Vector2( 300, 720 )
-nodes/DeathCurl/node = SubResource( 20 )
+nodes/DeathCurl/node = SubResource( 12 )
 nodes/DeathCurl/position = Vector2( 640, 560 )
-nodes/JumpKick/node = SubResource( 10 )
+nodes/JumpKick/node = SubResource( 13 )
 nodes/JumpKick/position = Vector2( 300, 620 )
-nodes/Jumping/node = SubResource( 11 )
+nodes/Jumping/node = SubResource( 14 )
 nodes/Jumping/position = Vector2( 300, 320 )
-nodes/OnWall/node = SubResource( 12 )
+nodes/OnWall/node = SubResource( 15 )
 nodes/OnWall/position = Vector2( 300, 420 )
-nodes/Ragdoll/node = SubResource( 21 )
+nodes/Ragdoll/node = SubResource( 16 )
 nodes/Ragdoll/position = Vector2( 800, 580 )
-nodes/Running/node = SubResource( 13 )
+nodes/Running/node = SubResource( 17 )
 nodes/Running/position = Vector2( 300, 220 )
-nodes/Standing/node = SubResource( 14 )
+nodes/Standing/node = SubResource( 18 )
 nodes/Standing/position = Vector2( 300, 120 )
-nodes/WallJump/node = SubResource( 15 )
+nodes/WallJump/node = SubResource( 19 )
 nodes/WallJump/position = Vector2( 300, 520 )
-nodes/action/node = SubResource( 16 )
+nodes/action/node = SubResource( 20 )
 nodes/action/position = Vector2( 780, 200 )
 nodes/output/position = Vector2( 1340, 180 )
 node_connections = [ "action", 0, "Standing", "action", 1, "Running", "action", 2, "Jumping", "action", 3, "OnWall", "action", 4, "WallJump", "action", 5, "JumpKick", "action", 6, "Animation", "action", 7, "DeathCurl", "action", 8, "Ragdoll", "output", 0, "action" ]
@@ -2171,18 +2170,18 @@ volume_db = -16.0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Standing"
-anims/DeathCurl = SubResource( 18 )
-anims/Falling = SubResource( 2 )
-anims/JumpKick = SubResource( 3 )
-anims/Jumping = SubResource( 4 )
-anims/OnWall = SubResource( 5 )
-anims/Ragdoll = SubResource( 19 )
-anims/Running = SubResource( 6 )
-anims/Standing = SubResource( 7 )
-anims/WallJump = SubResource( 8 )
+anims/DeathCurl = SubResource( 2 )
+anims/Falling = SubResource( 3 )
+anims/JumpKick = SubResource( 4 )
+anims/Jumping = SubResource( 5 )
+anims/OnWall = SubResource( 6 )
+anims/Ragdoll = SubResource( 7 )
+anims/Running = SubResource( 8 )
+anims/Standing = SubResource( 9 )
+anims/WallJump = SubResource( 10 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 17 )
+tree_root = SubResource( 21 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/action/current = 0
