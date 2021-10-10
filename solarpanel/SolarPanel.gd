@@ -25,5 +25,5 @@ func _on_SolarPanel_body_entered(body):
 	Global.clean += 1
 	$CleanSound.play()
 	$AnimatedSprite.frame = 1
-	$AnimationPlayer.play("sheen")
+	$AnimationPlayer.play("sheen_always")
 	$Particles2D.emitting = true
