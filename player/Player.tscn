@@ -1148,6 +1148,7 @@ animation = "Standing"
 
 [sub_resource type="AnimationNodeTransition" id=11]
 input_count = 5
+xfade_time = 0.1
 input_0/name = "Standing"
 input_0/auto_advance = false
 input_1/name = "Running"
@@ -1167,7 +1168,7 @@ graph_offset = Vector2( 0, 68 )
 nodes/Jumping/node = SubResource( 7 )
 nodes/Jumping/position = Vector2( 300, 400 )
 nodes/OnWall/node = SubResource( 8 )
-nodes/OnWall/position = Vector2( 320, 660 )
+nodes/OnWall/position = Vector2( 320, 600 )
 nodes/Running/node = SubResource( 9 )
 nodes/Running/position = Vector2( 300, 240 )
 nodes/Standing/node = SubResource( 10 )
@@ -1175,8 +1176,9 @@ nodes/Standing/position = Vector2( 300, 80 )
 nodes/Transition/node = SubResource( 11 )
 nodes/Transition/position = Vector2( 800, 280 )
 nodes/WallJump/node = SubResource( 12 )
-nodes/WallJump/position = Vector2( 300, 540 )
+nodes/WallJump/position = Vector2( 420, 680 )
 nodes/output/position = Vector2( 1340, 180 )
+node_connections = [ "output", 0, "Transition", "Transition", 0, "Standing", "Transition", 1, "Running", "Transition", 2, "Jumping", "Transition", 3, "OnWall", "Transition", 4, "WallJump" ]
 
 [node name="Player" type="KinematicBody2D"]
 z_index = 1
@@ -1231,49 +1233,49 @@ default_length = 7.0
 
 [node name="LeftArm" type="Bone2D" parent="Skeleton2D/Torso"]
 position = Vector2( -0.075179, -8.01497 )
-rotation = -0.988746
+rotation = -2.2627
 rest = Transform2D( 1, 0, 0, 1, -0.110257, -7.96241 )
 default_length = 4.0
 
 [node name="LeftFormArm" type="Bone2D" parent="Skeleton2D/Torso/LeftArm"]
 position = Vector2( -3.9389, 0.0629168 )
-rotation = -3.65154
+rotation = -4.05688
 rest = Transform2D( -1, -4.44253e-06, 4.44253e-06, -1, -4.00905, 0.0278406 )
 default_length = 4.0
 
 [node name="RightLeg" type="Bone2D" parent="Skeleton2D/Torso"]
 position = Vector2( 0.751694, 0.194885 )
-rotation = -0.0873099
+rotation = -1.35852
 rest = Transform2D( 1, 0, 0, 1, 0.751694, 0.194885 )
 default_length = 4.0
 
 [node name="RightCalf" type="Bone2D" parent="Skeleton2D/Torso/RightLeg"]
 position = Vector2( -0.00723833, 5.79084 )
-rotation = 1.59469
+rotation = 2.86859
 rest = Transform2D( 2.22127e-06, 1, -1, 2.22127e-06, 0.0278378, 5.79084 )
 default_length = 6.0
 
 [node name="RightArm" type="Bone2D" parent="Skeleton2D/Torso"]
 position = Vector2( 0.0247135, -8.01497 )
-rotation = 1.13512
+rotation = -0.0142303
 rest = Transform2D( 1, 0, 0, 1, -0.0278416, -7.96241 )
 default_length = 4.0
 
 [node name="RightForeArm" type="Bone2D" parent="Skeleton2D/Torso/RightArm"]
 position = Vector2( 4.31529, 0.0206041 )
-rotation = 0.309174
+rotation = -0.911318
 rest = Transform2D( 1, 0, 0, 1, 4.31529, 0.0556812 )
 default_length = 4.0
 
 [node name="LeftLeg" type="Bone2D" parent="Skeleton2D/Torso"]
 position = Vector2( -0.835218, 0.167044 )
-rotation = 0.068786
+rotation = -0.706637
 rest = Transform2D( 1, 0, 0, 1, -0.835218, 0.167044 )
 default_length = 4.0
 
 [node name="LeftCalf" type="Bone2D" parent="Skeleton2D/Torso/LeftLeg"]
 position = Vector2( 0.0278378, 5.79084 )
-rotation = 1.44103
+rotation = 1.67885
 rest = Transform2D( 2.22127e-06, 1, -1, 2.22127e-06, 0.0278378, 5.79084 )
 default_length = 6.0
 
@@ -1374,4 +1376,4 @@ anims/WallJump = SubResource( 6 )
 tree_root = SubResource( 13 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
-parameters/Transition/current = 0
+parameters/Transition/current = 3
