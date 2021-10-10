@@ -21,8 +21,20 @@ func get_input_dir():
 	
 	if Input.is_action_pressed("left"):
 		dir += Vector2.LEFT
-	if Input.is_action_pressed("right"):
+		$Node2D.scale.x = -1
+	elif Input.is_action_pressed("right"):
 		dir += Vector2.RIGHT
+		$Node2D.scale.x = 1
+	
+	if !Input.is_action_just_pressed("jump") and is_on_floor():
+		if Input.is_action_pressed("left"):
+				$AnimationTree.set("parameters/action/current",1)
+		elif Input.is_action_pressed("right"):
+				$AnimationTree.set("parameters/action/current",1)
+		else:
+				$AnimationTree.set("parameters/action/current",0)
+	if !is_on_floor() and !is_on_wall():
+		$AnimationTree.set("parameters/action/current",2)
 	
 	return dir.normalized()
 
@@ -73,10 +85,12 @@ func _process(delta):
 	
 	if is_on_wall() and !$GrappleGun.is_attached():
 		velocity.y = 0
+		$AnimationTree.set("parameters/action/current",3)
 	
 	# Jump
 	if Input.is_action_just_pressed("jump"):
 		if is_on_floor():
+			$AnimationTree.set("parameters/action/current",2)
 			print("on ground")
 			# Straight up
 			#velocity.y -= JUMP_SPEED
@@ -85,6 +99,7 @@ func _process(delta):
 			$JumpSound.play()
 			#camera.add_trauma(0.2)
 		elif is_on_wall():
+			$AnimationTree.set("parameters/action/current",4)
 			print("on wall")
 			var wall_normal = Vector2.RIGHT
 			if $RayCastRight1.is_colliding() or $RayCastRight2.is_colliding() or $RayCastRight3.is_colliding():
@@ -95,10 +110,18 @@ func _process(delta):
 			$JumpSound.play()
 			#camera.add_trauma(0.2)
 		elif Input.is_action_just_pressed("jump") and air_jumps_left > 0:
+			$AnimationTree.set("parameters/action/current",2)
 			print("on air")
 			velocity.y = min(0, velocity.y) - JUMP_SPEED
 			$JumpSound.play()
 			air_jumps_left -= 1
+			
+			
+
+
+
+			
+	
 
 var was_in_air = false
 var was_velocity: Vector2
