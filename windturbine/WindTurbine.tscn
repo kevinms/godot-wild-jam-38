@@ -5,7 +5,7 @@
 [ext_resource path="res://windturbine/post.png" type="Texture" id=3]
 
 [sub_resource type="CircleShape2D" id=1]
-radius = 38.7956
+radius = 26.9509
 
 [node name="WindTurbine" type="Node2D"]
 script = ExtResource( 2 )
@@ -16,13 +16,13 @@ scale = Vector2( 0.144285, 0.144285 )
 texture = ExtResource( 3 )
 
 [node name="Blade" type="Area2D" parent="."]
-position = Vector2( 0, -50.7332 )
+position = Vector2( 0, -70.9955 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Blade"]
 shape = SubResource( 1 )
 
 [node name="Blade" type="Sprite" parent="Blade"]
-scale = Vector2( 0.125452, 0.125452 )
+scale = Vector2( 0.0810687, 0.0810687 )
 texture = ExtResource( 1 )
 
 [connection signal="body_entered" from="Blade" to="." method="_on_Blade_body_entered"]

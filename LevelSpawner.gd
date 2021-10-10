@@ -11,6 +11,7 @@ onready var building_scenes = [
 var building_sizes = []
 
 onready var balloon_scene = preload("res://balloon/Balloon.tscn")
+onready var windturbine_scene = preload("res://windturbine/WindTurbine.tscn")
 
 var objects = []
 
@@ -30,10 +31,16 @@ func randomly_place_balloons(pos) -> Node2D:
 	
 	return balloon
 
-func spawn_building(pos: Vector2) -> Node2D:
+func spawn_building(pos: Vector2, windturbine: bool) -> Node2D:
 	var index = randi() % building_scenes.size()
 	var building = building_scenes[index].instance()
 	var building_size = building.get_size_in_pixels()
+	
+	# Turbine
+	if windturbine:
+		var turbine = windturbine_scene.instance()
+		add_child(turbine)
+		turbine.global_position = pos
 	
 	pos.y += building_size.y / 2
 	
@@ -57,23 +64,7 @@ func randomly_place_building():
 	add_child(building)
 	building.global_position = pos
 
-const octaves = 1
-const lacunarity = 2.0
-const gain = 200.0
-
 var noise = OpenSimplexNoise.new()
-func get_fbm_altitude(x: float) -> float:
-	var y = 0.0
-	var amplitude = 0.5
-	var frequency = 1.0
-	
-	for i in range(octaves):
-		y += amplitude * noise.get_noise_1d(pos.x / 20.0 * frequency)
-		frequency *= lacunarity
-		amplitude *= gain
-	
-	return 0.0
-
 func get_noisy_altitude(x: float) -> float:
 	var amplitude = 2.0
 	var frequency = 0.2
@@ -81,6 +72,10 @@ func get_noisy_altitude(x: float) -> float:
 	y *= 200.0
 	print("amplitude: ", y)
 	return y
+
+
+const TURBINE_THRESHOLD = 500
+const TURBINE_INCREASE_OVER_DIST = 10000
 
 func generate_object():
 	var object = null
@@ -94,7 +89,14 @@ func generate_object():
 	pos.x += xoff #TODO: take into account old and new building sizes
 	#pos.x += rand_range(200, 200)
 	
-	object = spawn_building(pos)
+	var has_turbine = false
+	if pos.x > TURBINE_THRESHOLD: #TODO: make this like 10k+
+		#TODO: increase chance of turbine as pos.x increases, but still limit it
+		var chance = lerp(0.1, 0.3, (pos.x - TURBINE_THRESHOLD) / TURBINE_INCREASE_OVER_DIST)
+		if randf() < chance:
+			has_turbine = true
+	
+	object = spawn_building(pos, has_turbine)
 	
 	objects.append(object)
 
