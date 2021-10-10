@@ -11,7 +11,6 @@ uniform float speed: hint_range(0, 2) = 0.05;
 
 void fragment() {
 	vec4 col = vec4(0);
-	
 	vec2 offset = camera_offset + cloud_offset;
 	
 	float clouds = texture(noise, UV+vec2(TIME*speed, 0)+offset).x;
@@ -30,4 +29,5 @@ void fragment() {
 	}
 	
 	COLOR = col;
+	
 }

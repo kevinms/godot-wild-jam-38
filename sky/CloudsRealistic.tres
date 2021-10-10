@@ -10,6 +10,8 @@ persistence = 0.475
 
 [sub_resource type="NoiseTexture" id=2]
 seamless = true
+as_normalmap = true
+bump_strength = 8.7
 noise = SubResource( 1 )
 
 [resource]
@@ -17,7 +19,7 @@ shader = ExtResource( 1 )
 shader_param/render_sky = true
 shader_param/camera_offset = Vector2( -0.005, -0.633 )
 shader_param/cloud_offset = Vector2( 0, 0 )
-shader_param/sky_color = Color( 0.14902, 0.654902, 0.807843, 1 )
-shader_param/cloud_color = Color( 0.929412, 0.929412, 0.929412, 1 )
-shader_param/speed = 0.05
+shader_param/sky_color = Color( 0.0196078, 0.419608, 0.537255, 0.207843 )
+shader_param/cloud_color = Color( 0.929412, 0.929412, 0.929412, 0.435294 )
+shader_param/speed = 0.01
 shader_param/noise = SubResource( 2 )

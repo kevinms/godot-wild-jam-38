@@ -28,7 +28,7 @@ shader_param/camera_offset = Vector2( 2.337, 0.38 )
 shader_param/cloud_offset = Vector2( 0, 0 )
 shader_param/sky_color = Color( 0.0509804, 0.694118, 0.843137, 1 )
 shader_param/cloud_color = Color( 0.929412, 0.929412, 0.929412, 1 )
-shader_param/speed = 0.05
+shader_param/speed = 0.02
 shader_param/noise = SubResource( 2 )
 
 [sub_resource type="RectangleShape2D" id=4]
@@ -69,6 +69,8 @@ scale = Vector2( 16.0704, 9.4221 )
 texture = ExtResource( 3 )
 
 [node name="CloudsFront" type="Sprite" parent="Camera2D"]
+modulate = Color( 1, 1, 1, 0.407843 )
+self_modulate = Color( 1, 1, 1, 0.109804 )
 material = SubResource( 3 )
 position = Vector2( 0.420472, 1.26135 )
 scale = Vector2( 16.0704, 9.4221 )

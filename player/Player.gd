@@ -34,7 +34,10 @@ func get_input_dir():
 		else:
 				$AnimationTree.set("parameters/action/current",0)
 	if !is_on_floor() and !is_on_wall():
-		$AnimationTree.set("parameters/action/current",2)
+		if velocity.y < 0: 
+			$AnimationTree.set("parameters/action/current",2)
+		if velocity.y > 0: 
+			$AnimationTree.set("parameters/action/current",6)
 	
 	return dir.normalized()
 
@@ -110,13 +113,13 @@ func _process(delta):
 			$JumpSound.play()
 			#camera.add_trauma(0.2)
 		elif Input.is_action_just_pressed("jump") and air_jumps_left > 0:
+			$AnimationTree.active = false
+			$AnimationTree.active = true
 			$AnimationTree.set("parameters/action/current",2)
 			print("on air")
 			velocity.y = min(0, velocity.y) - JUMP_SPEED
 			$JumpSound.play()
 			air_jumps_left -= 1
-			
-			
 
 
 
