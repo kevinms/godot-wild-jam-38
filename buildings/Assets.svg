@@ -339,11 +339,11 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="4"
-     inkscape:cx="114.41118"
-     inkscape:cy="973.85881"
+     inkscape:zoom="2"
+     inkscape:cx="500.03009"
+     inkscape:cy="896.82008"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer6"
+     inkscape:current-layer="layer2"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:window-width="2560"
@@ -363,6 +363,95 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="DropShadow"
+     style="display:inline">
+    <g
+       id="g3936-8-1-0"
+       style="display:inline;fill:#636160;fill-opacity:1;stroke:#000000;stroke-width:1.49847;stroke-opacity:1"
+       transform="matrix(0,-0.47238516,0.94278607,0,-107.34073,276.61741)">
+      <rect
+         style="fill:#636160;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.49847;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3818-7-40-1"
+         width="1.1225319"
+         height="18.802412"
+         x="105.05029"
+         y="207.66843" />
+      <rect
+         style="fill:#636160;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.49847;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3912-9-49-9"
+         width="0.60803819"
+         height="10.383421"
+         x="105.56478"
+         y="207.66843" />
+    </g>
+    <g
+       id="g3936-8-1-0-8"
+       style="display:inline;fill:#636160;fill-opacity:1;stroke:#000000;stroke-width:1.49847;stroke-opacity:1"
+       transform="matrix(0,-0.47238515,0.94278606,0,-89.614077,276.09504)">
+      <rect
+         style="fill:#636160;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.49847;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3818-7-40-1-6"
+         width="1.1225319"
+         height="18.802412"
+         x="105.05029"
+         y="207.66843" />
+      <rect
+         style="fill:#636160;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.49847;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3912-9-49-9-5"
+         width="0.60803819"
+         height="10.383421"
+         x="105.56478"
+         y="207.66843" />
+    </g>
+    <g
+       id="g3936-8-1-0-6"
+       style="display:inline;fill:#636160;fill-opacity:1;stroke:#000000;stroke-width:1.49847;stroke-opacity:1"
+       transform="matrix(0.47238515,0,0,0.94278606,56.548622,30.683944)">
+      <rect
+         style="fill:#636160;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.49847;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3818-7-40-1-4"
+         width="1.1225319"
+         height="18.802412"
+         x="105.05029"
+         y="207.66843" />
+      <rect
+         style="fill:#636160;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.49847;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3912-9-49-9-7"
+         width="0.60803819"
+         height="10.383421"
+         x="105.56478"
+         y="207.66843" />
+    </g>
+    <g
+       id="g3936-8-1-0-4"
+       style="display:inline;fill:#636160;fill-opacity:1;stroke:#000000;stroke-width:1.49847;stroke-opacity:1"
+       transform="matrix(-0.47238515,0,0,-0.94278606,155.79702,421.72747)">
+      <rect
+         style="fill:#636160;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.49847;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3818-7-40-1-0"
+         width="1.1225319"
+         height="18.802412"
+         x="105.05029"
+         y="207.66843" />
+      <rect
+         style="fill:#636160;fill-opacity:1;fill-rule:evenodd;stroke:#000000;stroke-width:1.49847;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3912-9-49-9-79"
+         width="0.60803819"
+         height="10.383421"
+         x="105.56478"
+         y="207.66843" />
+    </g>
+    <rect
+       style="fill:#302e32;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5910"
+       width="2.3812511"
+       height="18.802412"
+       x="134.81201"
+       y="205.56876" />
+  </g>
   <g
      inkscape:groupmode="layer"
      id="layer6"
@@ -3627,13 +3716,16 @@
        rx="0.12277695"
        ry="0.13446999" />
     <rect
-       style="fill:#008000;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:#008000;fill-rule:evenodd;stroke:#555252;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect1294"
        width="0.019373655"
        height="5.622396"
-       x="93.568298"
-       y="227.989"
-       transform="rotate(19.448833)" />
+       x="93.608643"
+       y="227.9046"
+       transform="rotate(19.448833)"
+       inkscape:export-filename="C:\Users\marsh\Documents\Godot\godot-wild-jam-38\grapple\GrappleHook.png"
+       inkscape:export-xdpi="1248"
+       inkscape:export-ydpi="1248" />
     <ellipse
        style="fill:#3d3e3d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.799999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter3315)"
        id="path1331"
@@ -3677,7 +3769,7 @@
        rx="6.2507811"
        ry="4.5309896" />
     <ellipse
-       style="fill:#010000;fill-opacity:0.4176707;fill-rule:evenodd;stroke:none;stroke-width:0.799999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter3339)"
+       style="fill:#010000;fill-opacity:0.417671;fill-rule:evenodd;stroke:none;stroke-width:0.799999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter3339)"
        id="path1350"
        cx="160.30443"
        cy="267.12997"
@@ -3705,7 +3797,7 @@
        rx="0.23151042"
        ry="2.5135417" />
     <ellipse
-       style="fill:#010000;fill-opacity:0.54618472;fill-rule:evenodd;stroke:none;stroke-width:0.799998;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter3355)"
+       style="fill:#010000;fill-opacity:0.546185;fill-rule:evenodd;stroke:none;stroke-width:0.799998;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter3355)"
        id="path1358"
        cx="163.24791"
        cy="258.20029"
@@ -3719,14 +3811,14 @@
        rx="1.8520833"
        ry="3.4065104" />
     <ellipse
-       style="fill:#010000;fill-opacity:0.66265059;fill-rule:evenodd;stroke:none;stroke-width:0.799999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter3363)"
+       style="fill:#010000;fill-opacity:0.662651;fill-rule:evenodd;stroke:none;stroke-width:0.799999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter3363)"
        id="path1362"
        cx="165.62917"
        cy="274.00912"
        rx="4.2333331"
        ry="2.348177" />
     <ellipse
-       style="fill:#010000;fill-opacity:0.6064257;fill-rule:evenodd;stroke:none;stroke-width:0.799999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter3367)"
+       style="fill:#010000;fill-opacity:0.606426;fill-rule:evenodd;stroke:none;stroke-width:0.799999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter3367)"
        id="path1364"
        cx="155.01276"
        cy="275.56357"
@@ -3795,28 +3887,141 @@
        rx="2.778125"
        ry="2.3812499" />
     <rect
-       style="display:inline;fill:#008000;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none"
+       style="display:inline;fill:#008000;fill-rule:evenodd;stroke:#555252;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect1294-7"
        width="0.019373655"
        height="5.622396"
        x="231.19524"
        y="89.339462"
-       transform="rotate(65.635894)" />
+       transform="rotate(65.635894)"
+       inkscape:export-filename="C:\Users\marsh\Documents\Godot\godot-wild-jam-38\grapple\GrappleHook.png"
+       inkscape:export-xdpi="1248"
+       inkscape:export-ydpi="1248" />
     <rect
-       style="display:inline;fill:#008000;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none"
+       style="display:inline;fill:#008000;fill-rule:evenodd;stroke:#555252;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect1294-4"
        width="0.019373655"
        height="5.622396"
        x="-110.20184"
        y="220.44273"
-       transform="rotate(-28.945535)" />
+       transform="rotate(-28.945535)"
+       inkscape:export-filename="C:\Users\marsh\Documents\Godot\godot-wild-jam-38\grapple\GrappleHook.png"
+       inkscape:export-xdpi="1248"
+       inkscape:export-ydpi="1248" />
     <rect
-       style="display:inline;fill:#008000;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none"
+       style="display:inline;fill:#008000;fill-rule:evenodd;stroke:#555252;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        id="rect1294-2"
        width="0.019373655"
        height="5.622396"
        x="230.00394"
        y="-97.640373"
-       transform="rotate(109.74612)" />
+       transform="rotate(109.74612)"
+       inkscape:export-filename="C:\Users\marsh\Documents\Godot\godot-wild-jam-38\grapple\GrappleHook.png"
+       inkscape:export-xdpi="1248"
+       inkscape:export-ydpi="1248" />
+    <g
+       id="g3936">
+      <rect
+         style="fill:#c8c8c8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3818"
+         width="1.1225319"
+         height="18.802412"
+         x="105.05029"
+         y="207.66843" />
+      <rect
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#c8c8c8;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3912"
+         width="0.60803819"
+         height="10.383421"
+         x="105.56478"
+         y="207.66843" />
+    </g>
+    <g
+       id="g3936-8"
+       style="display:inline"
+       transform="rotate(90,106.17282,226.47084)">
+      <rect
+         style="fill:#c8c8c8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3818-7"
+         width="1.1225319"
+         height="18.802412"
+         x="105.05029"
+         y="207.66843" />
+      <rect
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#c8c8c8;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3912-9"
+         width="0.60803819"
+         height="10.383421"
+         x="105.56478"
+         y="207.66843" />
+    </g>
+    <g
+       id="g3936-8-8"
+       style="display:inline"
+       transform="rotate(180,106.17282,226.47084)">
+      <rect
+         style="fill:#c8c8c8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3818-7-4"
+         width="1.1225319"
+         height="18.802412"
+         x="105.05029"
+         y="207.66843" />
+      <rect
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#c8c8c8;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3912-9-4"
+         width="0.60803819"
+         height="10.383421"
+         x="105.56478"
+         y="207.66843" />
+    </g>
+    <g
+       id="g3936-8-1"
+       style="display:inline"
+       transform="rotate(-90,106.17282,226.47084)">
+      <rect
+         style="fill:#c8c8c8;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:1;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3818-7-40"
+         width="1.1225319"
+         height="18.802412"
+         x="105.05029"
+         y="207.66843" />
+      <rect
+         style="fill:none;fill-opacity:1;fill-rule:evenodd;stroke:#c8c8c8;stroke-width:1;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect3912-9-49"
+         width="0.60803819"
+         height="10.383421"
+         x="105.56478"
+         y="207.66843" />
+    </g>
+    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5872"
+       width="10.219719"
+       height="0.35079125"
+       x="87.370415"
+       y="226.12006" />
+    <rect
+       style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5872-3"
+       width="10.219719"
+       height="0.35079125"
+       x="114.59181"
+       y="226.47084" />
+    <rect
+       style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5872-3-7"
+       width="10.219719"
+       height="0.35079125"
+       x="-218.05185"
+       y="106.17282"
+       transform="rotate(-90)" />
+    <rect
+       style="display:inline;fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect5872-3-8"
+       width="10.219719"
+       height="0.35079125"
+       x="234.88983"
+       y="-106.17282"
+       transform="rotate(90)" />
   </g>
 </svg>
