@@ -11,6 +11,7 @@
 [ext_resource path="res://sky/CloudsRealistic.gdshader" type="Shader" id=9]
 [ext_resource path="res://Camera2D.gd" type="Script" id=10]
 [ext_resource path="res://sky/Background.png" type="Texture" id=11]
+[ext_resource path="res://buildings/Building1.tscn" type="PackedScene" id=12]
 
 [sub_resource type="OpenSimplexNoise" id=1]
 seed = 2
@@ -31,9 +32,6 @@ shader_param/sky_color = Color( 0.0509804, 0.694118, 0.843137, 1 )
 shader_param/cloud_color = Color( 0.929412, 0.929412, 0.929412, 1 )
 shader_param/speed = 0.05
 shader_param/noise = SubResource( 2 )
-
-[sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 250, 10 )
 
 [sub_resource type="Environment" id=5]
 background_mode = 4
@@ -73,7 +71,7 @@ texture = ExtResource( 3 )
 modulate = Color( 1, 1, 1, 0.407843 )
 self_modulate = Color( 1, 1, 1, 0.109804 )
 material = SubResource( 3 )
-position = Vector2( 0.420472, 1.26135 )
+position = Vector2( 0.420471, 1.26135 )
 scale = Vector2( 16.0704, 9.4221 )
 z_index = 41
 texture = ExtResource( 3 )
@@ -100,20 +98,8 @@ __meta__ = {
 "_edit_lock_": true
 }
 
-[node name="TestPlank" type="StaticBody2D" parent="."]
-position = Vector2( 253.53, 313.234 )
-collision_layer = 2
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="TestPlank"]
-shape = SubResource( 4 )
-
-[node name="Sprite" type="Sprite" parent="TestPlank"]
-scale = Vector2( 7.76, 0.28 )
-texture = ExtResource( 3 )
-
 [node name="LevelSpawner" type="Node2D" parent="."]
-position = Vector2( 135.222, 241.977 )
+position = Vector2( 340.79, 247.533 )
 script = ExtResource( 6 )
 camera_path = NodePath("../Camera2D")
 
@@ -131,13 +117,16 @@ environment = SubResource( 5 )
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-motion_scale = Vector2( 0.5, 0.75 )
+motion_scale = Vector2( 0.5, 0.5 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 3226.28, -1636.73 )
+position = Vector2( 2720.17, -1871.66 )
 scale = Vector2( 0.719464, 0.642329 )
 texture = ExtResource( 11 )
 region_enabled = true
 region_rect = Rect2( 0, 0, 9000, 9000 )
+
+[node name="Starting Building" parent="." instance=ExtResource( 12 )]
+position = Vector2( 322.74, 414.028 )
 
 [connection signal="screen_exited" from="Player/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

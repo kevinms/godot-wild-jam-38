@@ -339,17 +339,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.99999999"
-     inkscape:cx="249.01624"
-     inkscape:cy="925.38334"
+     inkscape:zoom="4"
+     inkscape:cx="114.41118"
+     inkscape:cy="973.85881"
      inkscape:document-units="mm"
      inkscape:current-layer="layer6"
      inkscape:document-rotation="0"
      showgrid="false"
-     inkscape:window-width="1858"
-     inkscape:window-height="1057"
-     inkscape:window-x="7032"
-     inkscape:window-y="341"
+     inkscape:window-width="2560"
+     inkscape:window-height="1389"
+     inkscape:window-x="4472"
+     inkscape:window-y="-8"
      inkscape:window-maximized="1" />
   <metadata
      id="metadata1396">
@@ -3627,28 +3627,13 @@
        rx="0.12277695"
        ry="0.13446999" />
     <rect
-       style="fill:#008000;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none"
+       style="fill:#008000;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none"
        id="rect1294"
        width="0.019373655"
        height="5.622396"
-       x="11.377072"
-       y="245.99635" />
-    <rect
-       style="fill:#008000;fill-rule:evenodd;stroke:#000000;stroke-width:0.536169;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
-       id="rect1296"
-       width="0.10671759"
-       height="3.3169508"
-       x="150.92305"
-       y="282.87292"
-       transform="matrix(1,0,-0.49369416,0.8696356,0,0)" />
-    <rect
-       style="display:inline;fill:#008000;fill-rule:evenodd;stroke:#000000;stroke-width:0.53617;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none"
-       id="rect1296-4"
-       width="0.10671759"
-       height="3.3169508"
-       x="128.14954"
-       y="282.87292"
-       transform="matrix(-1,0,0.49369417,0.8696356,0,0)" />
+       x="93.568298"
+       y="227.989"
+       transform="rotate(19.448833)" />
     <ellipse
        style="fill:#3d3e3d;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.799999;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;filter:url(#filter3315)"
        id="path1331"
@@ -3809,5 +3794,29 @@
        cy="268.68436"
        rx="2.778125"
        ry="2.3812499" />
+    <rect
+       style="display:inline;fill:#008000;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1294-7"
+       width="0.019373655"
+       height="5.622396"
+       x="231.19524"
+       y="89.339462"
+       transform="rotate(65.635894)" />
+    <rect
+       style="display:inline;fill:#008000;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1294-4"
+       width="0.019373655"
+       height="5.622396"
+       x="-110.20184"
+       y="220.44273"
+       transform="rotate(-28.945535)" />
+    <rect
+       style="display:inline;fill:#008000;fill-rule:evenodd;stroke:#000000;stroke-width:1;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect1294-2"
+       width="0.019373655"
+       height="5.622396"
+       x="230.00394"
+       y="-97.640373"
+       transform="rotate(109.74612)" />
   </g>
 </svg>

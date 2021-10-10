@@ -15,6 +15,7 @@ var air_jumps_left = NUM_AIR_JUMPS
 var velocity = Vector2.ZERO
 
 onready var camera = Global.get_camera()
+onready var GrappleGun = $Node2D/GrappleGun
 
 func get_input_dir():
 	var dir = Vector2.ZERO
@@ -44,9 +45,9 @@ func get_input_dir():
 func _process(delta):
 	if Input.is_action_just_pressed("fire"):
 		print("grapple!")
-		$GrappleGun.fire()
+		GrappleGun.fire()
 	if Input.is_action_just_released("fire"):
-		$GrappleGun.release()
+		GrappleGun.release()
 	
 	var dir = get_input_dir()
 	
@@ -55,7 +56,7 @@ func _process(delta):
 		if is_on_floor():
 			velocity.x -= FRICTION * delta * velocity.x
 		else:
-			if !$GrappleGun.is_attached():
+			if !GrappleGun.is_attached():
 				#velocity.x -= AIR_FRICTION * delta * velocity.x
 				pass
 	
@@ -63,7 +64,7 @@ func _process(delta):
 	# Or, if apply in the opposite direction of acceleration
 	if abs(velocity.x) < MAX_SPEED or sign(velocity.x) != sign(dir.x):
 		#print("accelerating: ", velocity.x)
-		var scale_accel = 2.0 if $GrappleGun.is_attached() else 1.0
+		var scale_accel = 2.0 if GrappleGun.is_attached() else 1.0
 		velocity += ACCELERATION * scale_accel * delta * dir
 	# Blanket clamping messes up the grappling hook
 	#velocity.x = clamp(velocity.x, -MAX_SPEED, MAX_SPEED)
@@ -74,10 +75,10 @@ func _process(delta):
 	velocity.y += GRAVITY * delta
 	
 	# Rope
-	velocity += $GrappleGun.compute_rope_force(velocity)
+	velocity += GrappleGun.compute_rope_force(velocity)
 	
 	# Spring
-	velocity += $GrappleGun.compute_spring_force() * 10.0 * delta
+	velocity += GrappleGun.compute_spring_force() * 10.0 * delta
 	
 	velocity = move_and_slide(velocity, Vector2.UP, true)
 	
@@ -86,7 +87,7 @@ func _process(delta):
 	
 	shake_camera()
 	
-	if is_on_wall() and !$GrappleGun.is_attached():
+	if is_on_wall() and !GrappleGun.is_attached():
 		velocity.y = 0
 		$AnimationTree.set("parameters/action/current",3)
 	
