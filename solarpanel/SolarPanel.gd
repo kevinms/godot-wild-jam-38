@@ -5,7 +5,7 @@ var clean = false
 func get_size_in_pixels() -> Vector2:
 	#return $CollisionShape2D.get_shape().get_extents()*2
 	var size = $AnimatedSprite.frames.get_frame("default", 0).get_size() * $AnimatedSprite.scale
-	print(size)
+	#print(size)
 	return size
 
 func _ready():
