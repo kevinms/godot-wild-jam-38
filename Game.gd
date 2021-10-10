@@ -1,9 +1,12 @@
 extends Node2D
 
+
 func _ready():
 	Global.reset()
 	Global.connect("windturbine_hit", self, "on_windturbine_hit")
 	$Camera2D/GameOver.visible = false
+	Global.playerStartingPosition = int($Player.position.x)
+
 
 func process_game_over():
 	if Input.is_action_just_pressed("ui_accept"):
@@ -38,7 +41,7 @@ func move_camera(delta: float):
 	player_pos.x += clamp($Player.velocity.x*0.8, -view_size.x/2, view_size.x/2)
 	
 	#TODO: increase camera speed over time, but set a limit so players can go infinite
-	#camera_pos.x += 200 * delta
+	camera_pos.x += 200 * delta
 	if player_pos.x > camera_pos.x:
 		camera_pos.x = lerp(camera_pos.x, player_pos.x, 3.0*delta)
 		
@@ -56,6 +59,8 @@ func _process(delta):
 	if Global.game_over:
 		process_game_over()
 		return
+		
+	Global.distance = int($Player.position.x)
 	
 	move_camera(delta)
 

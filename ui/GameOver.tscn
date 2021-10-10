@@ -22,6 +22,7 @@ __meta__ = {
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="ScoreLabel" type="Label" parent="."]
+visible = false
 margin_left = -77.0962
 margin_top = -56.1745
 margin_right = 61.9038
@@ -33,6 +34,7 @@ __meta__ = {
 }
 
 [node name="Score" type="Label" parent="."]
+visible = false
 margin_left = 2.69707
 margin_top = -54.5871
 margin_right = 98.6971
@@ -74,6 +76,7 @@ __meta__ = {
 }
 
 [node name="FoodLabel" type="Label" parent="Grid"]
+visible = false
 margin_top = 34.0
 margin_right = 195.0
 margin_bottom = 64.0
@@ -84,9 +87,9 @@ __meta__ = {
 }
 
 [node name="Food" type="Label" parent="Grid"]
-margin_left = 209.0
+visible = false
 margin_top = 34.0
-margin_right = 251.0
+margin_right = 97.0
 margin_bottom = 64.0
 custom_fonts/font = ExtResource( 2 )
 text = "20m"
@@ -95,9 +98,9 @@ __meta__ = {
 }
 
 [node name="CleanLabel" type="Label" parent="Grid"]
-margin_top = 68.0
+margin_top = 34.0
 margin_right = 195.0
-margin_bottom = 98.0
+margin_bottom = 64.0
 custom_fonts/font = ExtResource( 2 )
 text = "Solar Panels Cleaned:"
 __meta__ = {
@@ -106,9 +109,9 @@ __meta__ = {
 
 [node name="Clean" type="Label" parent="Grid"]
 margin_left = 209.0
-margin_top = 68.0
+margin_top = 34.0
 margin_right = 251.0
-margin_bottom = 98.0
+margin_bottom = 64.0
 custom_fonts/font = ExtResource( 2 )
 text = "20m"
 __meta__ = {

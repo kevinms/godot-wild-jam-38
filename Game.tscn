@@ -91,7 +91,7 @@ __meta__ = {
 }
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 181.698, 183.287 )
+position = Vector2( 180, 183.287 )
 
 [node name="VisibilityNotifier2D" type="VisibilityNotifier2D" parent="Player"]
 scale = Vector2( 3.34599, 3.34599 )
@@ -122,7 +122,7 @@ motion_scale = Vector2( 0.5, 0.5 )
 motion_mirroring = Vector2( 4000, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1459.61, -911.078 )
+position = Vector2( 1460.5, -911.969 )
 scale = Vector2( 0.43934, 0.412944 )
 texture = ExtResource( 11 )
 region_enabled = true
