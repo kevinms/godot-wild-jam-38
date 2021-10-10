@@ -119,6 +119,7 @@ environment = SubResource( 4 )
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
 motion_scale = Vector2( 0.5, 0.5 )
+motion_mirroring = Vector2( 6500, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
 position = Vector2( 2720.17, -1871.66 )
