@@ -24,6 +24,8 @@ func shake():
 	offset.y = max_offset.y * amount * noise.get_noise_2d(noise.seed*3, noise_y)
 
 func add_trauma(amount):
+	if amount < 0.2:
+		return
 	trauma = min(trauma + amount, 1.0)
 
 func _process(delta):

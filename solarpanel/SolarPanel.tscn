@@ -22,6 +22,7 @@ shape = SubResource( 1 )
 
 [node name="CleanSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
+volume_db = -8.0
 script = ExtResource( 4 )
 
 [connection signal="body_entered" from="." to="." method="_on_SolarPanel_body_entered"]

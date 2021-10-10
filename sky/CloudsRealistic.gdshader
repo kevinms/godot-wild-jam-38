@@ -7,14 +7,15 @@ uniform vec2 cloud_offset;
 uniform vec4 sky_color: hint_color;
 uniform vec4 cloud_color: hint_color;
 uniform sampler2D noise;
+uniform float speed: hint_range(0, 2) = 0.05;
 
 void fragment() {
 	vec4 col = vec4(0);
 	
 	vec2 offset = camera_offset + cloud_offset;
 	
-	float clouds = texture(noise, UV+vec2(TIME*0.1, 0)+offset).x;
-	clouds *= texture(noise, UV+vec2(0, TIME*0.1)+offset).x;
+	float clouds = texture(noise, UV+vec2(TIME*speed, 0)+offset).x;
+	clouds *= texture(noise, UV+vec2(0, TIME*speed)+offset).x;
 	clouds *= 1.2;
 	
 	if (render_sky) {
