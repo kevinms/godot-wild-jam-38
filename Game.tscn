@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://sfx/FallDeath.mp3" type="AudioStream" id=1]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://sky/CloudsRealistic.tres" type="Material" id=8]
 [ext_resource path="res://sky/CloudsRealistic.gdshader" type="Shader" id=9]
 [ext_resource path="res://Camera2D.gd" type="Script" id=10]
+[ext_resource path="res://sky/Background.png" type="Texture" id=11]
 
 [sub_resource type="OpenSimplexNoise" id=1]
 seed = 2
@@ -126,5 +127,17 @@ autoplay = true
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 5 )
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.5, 0.75 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2( 3226.28, -1636.73 )
+scale = Vector2( 0.719464, 0.642329 )
+texture = ExtResource( 11 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 9000, 9000 )
 
 [connection signal="screen_exited" from="Player/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

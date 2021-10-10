@@ -2,16 +2,11 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Background.svg-d672f77687c8129f8910ca4f53f77695.stex"
-metadata={
-"vram_texture": false
-}
+valid=false
 
 [deps]
 
 source_file="res://sky/Background.svg"
-dest_files=[ "res://.import/Background.svg-d672f77687c8129f8910ca4f53f77695.stex" ]
-
 [params]
 
 compress/mode=0
