@@ -28,13 +28,13 @@ func add_child(node: Node, legible_unique_name: bool = false):
 	objects.append(node)
 	
 	# Free old objects
-	while objects.size() > 10:
+	while objects.size() > 30:
 		objects.pop_front().queue_free()
 
-func randomly_place_balloons(pos) -> Node2D:
+func randomly_place_balloons(pos: Vector2, miny=-200, maxy=-300) -> Node2D:
 	var balloon = balloon_scene.instance()
 	var balloon_pos = pos
-	balloon_pos.y += rand_range(-200, -300)
+	balloon_pos.y += rand_range(miny, maxy)
 	
 	add_child(balloon)
 	balloon.global_position = balloon_pos
@@ -87,8 +87,27 @@ func get_noisy_altitude(x: float) -> float:
 const TURBINE_THRESHOLD = 500
 const TURBINE_INCREASE_OVER_DIST = 10000
 
+var till_balloon_chain = 10
+func is_time_for_balloon_chain():
+	till_balloon_chain -= 1
+	if till_balloon_chain <= 0:
+		till_balloon_chain = 10
+		return true
+	return false
+
+func spawn_balloon_chain(num_balloons: int):
+	print("spawn balloon chain!!!!!!!!!!")
+	# Spawn chain of balloons
+	for i in range(num_balloons):
+		pos.x += rand_range(600, 800)
+		randomly_place_balloons(pos, -230, -260)
+
 func generate_object():
 	var object = null
+	
+	if is_time_for_balloon_chain():
+		spawn_balloon_chain(randi() % 3 + 1)
+		return
 	
 	var xoff = rand_range(200, 1000)
 	

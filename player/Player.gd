@@ -3,7 +3,7 @@ extends KinematicBody2D
 const MAX_SPEED = 200
 const MAX_SHAKE_SPEED = 1500
 const ACCELERATION = 550 #450
-const JUMP_SPEED = 400 #300
+const JUMP_SPEED = 400
 const WALL_JUMP_SPEED = 500
 const GRAVITY = 800
 const FRICTION = 15

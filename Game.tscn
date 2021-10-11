@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://sfx/FallDeath.mp3" type="AudioStream" id=1]
 [ext_resource path="res://player/Player.tscn" type="PackedScene" id=2]
@@ -13,6 +13,7 @@
 [ext_resource path="res://sky/Background.png" type="Texture" id=11]
 [ext_resource path="res://buildings/Building1.tscn" type="PackedScene" id=12]
 [ext_resource path="res://windturbine/WindTurbine.tscn" type="PackedScene" id=13]
+[ext_resource path="res://ui/Hud.tscn" type="PackedScene" id=14]
 
 [sub_resource type="OpenSimplexNoise" id=1]
 seed = 2
@@ -99,6 +100,12 @@ texture = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Hud" parent="Camera2D" instance=ExtResource( 14 )]
+margin_left = -490.41
+margin_top = -278.189
+margin_right = -177.411
+margin_bottom = -113.188
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
 position = Vector2( 180, 183.287 )

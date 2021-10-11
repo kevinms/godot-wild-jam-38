@@ -1,0 +1,78 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://ui/HudFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://ui/Hud.gd" type="Script" id=2]
+
+[node name="Hud" type="GridContainer"]
+margin_left = -312.681
+margin_top = -94.9017
+margin_right = 0.318909
+margin_bottom = 70.0989
+custom_constants/hseparation = 14
+columns = 2
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DistanceLabel" type="Label" parent="."]
+margin_right = 166.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 1 )
+text = "Distance:  "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Distance" type="Label" parent="."]
+margin_left = 180.0
+margin_right = 215.0
+margin_bottom = 25.0
+custom_fonts/font = ExtResource( 1 )
+text = "20m"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FoodLabel" type="Label" parent="."]
+visible = false
+margin_top = 34.0
+margin_right = 195.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 1 )
+text = "Food collected:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Food" type="Label" parent="."]
+visible = false
+margin_top = 34.0
+margin_right = 97.0
+margin_bottom = 64.0
+custom_fonts/font = ExtResource( 1 )
+text = "20m"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CleanLabel" type="Label" parent="."]
+margin_top = 29.0
+margin_right = 166.0
+margin_bottom = 54.0
+custom_fonts/font = ExtResource( 1 )
+text = "Solar Panels Cleaned:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Clean" type="Label" parent="."]
+margin_left = 180.0
+margin_top = 29.0
+margin_right = 215.0
+margin_bottom = 54.0
+custom_fonts/font = ExtResource( 1 )
+text = "20m"
+__meta__ = {
+"_edit_use_anchors_": false
+}
