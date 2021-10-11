@@ -25,6 +25,9 @@ func on_windturbine_hit():
 	velocity = (Vector2.RIGHT + Vector2.UP) * 1000.0
 	$AnimationTree.set("parameters/action/current",8)
 
+func reset():
+	velocity = Vector2.ZERO
+	air_jumps_left = NUM_AIR_JUMPS
 
 func get_input_dir():
 	var dir = Vector2.ZERO
@@ -137,10 +140,6 @@ func _process(delta):
 			$JumpSound.play()
 			air_jumps_left -= 1
 
-
-
-			
-	
 
 var was_in_air = false
 var was_velocity: Vector2

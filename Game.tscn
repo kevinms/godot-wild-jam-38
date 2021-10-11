@@ -160,7 +160,7 @@ texture = ExtResource( 3 )
 [node name="Starting Building" parent="." instance=ExtResource( 12 )]
 position = Vector2( 322.74, 414.028 )
 
-[node name="WindMill" parent="." instance=ExtResource( 13 )]
+[node name="WindTurbine" parent="." instance=ExtResource( 13 )]
 position = Vector2( 375.069, 203.125 )
 
 [connection signal="screen_exited" from="Player/VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]

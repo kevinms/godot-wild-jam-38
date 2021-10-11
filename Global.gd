@@ -24,4 +24,13 @@ func reset():
 
 func get_camera() -> Camera2D:
 	var camera: Camera2D = get_node("/root/Game/Camera2D")
+	if camera == null:
+		camera = get_tree().get_root().find_node("Camera2D", true, false)
 	return camera
+
+func get_base_node() -> Node:
+	var root = get_tree().get_root()
+	var node = root.find_node("Game", true, false)
+	if node == null:
+		node = root.find_node("MainMenu", true, false)
+	return node

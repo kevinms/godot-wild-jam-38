@@ -48,7 +48,8 @@ func fire():
 	
 	hook = hook_scene.instance()
 	#get_parent().add_child(hook)
-	var root = get_node("/root/Game")
+	#var root = get_node("/root/Game")
+	var root = Global.get_base_node()
 	root.add_child(hook)
 	
 	hook.dir = (get_global_mouse_position() - global_position).normalized()
