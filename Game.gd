@@ -25,6 +25,8 @@ func do_game_over():
 	if Global.game_over:
 		return
 	
+	print_stray_nodes()
+	
 	Global.game_over = true
 	print("dead")
 	$DeathSound.play()

@@ -21,6 +21,16 @@ onready var camera: Camera2D = get_node(camera_path)
 onready var base_pos = global_position
 onready var pos = base_pos
 
+func add_child(node: Node, legible_unique_name: bool = false):
+	.add_child(node)
+	
+	# Keep track of new objects
+	objects.append(node)
+	
+	# Free old objects
+	while objects.size() > 10:
+		objects.pop_front().queue_free()
+
 func randomly_place_balloons(pos) -> Node2D:
 	var balloon = balloon_scene.instance()
 	var balloon_pos = pos
@@ -49,20 +59,20 @@ func spawn_building(pos: Vector2, windturbine: bool) -> Node2D:
 	
 	return building
 
-func randomly_place_building():
-	var index = randi() % building_scenes.size()
-	var building = building_scenes[index].instance()
-	var building_size = building.get_size_in_pixels()
-	
-	var xscale = rand_range(1.0, 2.0)
-	pos.x += building_size.x * xscale
-	pos.y = base_pos.y + rand_range(-200, 200)
-	
-	randomly_place_balloons(pos + Vector2(0, -building_size.y/2))
-	
-	# Spawn
-	add_child(building)
-	building.global_position = pos
+#func randomly_place_building():
+#	var index = randi() % building_scenes.size()
+#	var building = building_scenes[index].instance()
+#	var building_size = building.get_size_in_pixels()
+#
+#	var xscale = rand_range(1.0, 2.0)
+#	pos.x += building_size.x * xscale
+#	pos.y = base_pos.y + rand_range(-200, 200)
+#
+#	randomly_place_balloons(pos + Vector2(0, -building_size.y/2))
+#
+#	# Spawn
+#	add_child(building)
+#	building.global_position = pos
 
 var noise = OpenSimplexNoise.new()
 func get_noisy_altitude(x: float) -> float:
@@ -97,8 +107,6 @@ func generate_object():
 			has_turbine = true
 	
 	object = spawn_building(pos, has_turbine)
-	
-	objects.append(object)
 
 func _ready():
 	#var building = building_scenes[0].instance()

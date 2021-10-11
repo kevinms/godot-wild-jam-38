@@ -22,12 +22,13 @@ func _process(delta):
 	$Line2D.clear_points()
 	$Line2D.add_point(to_local(gun.global_position))
 	$Line2D.add_point(to_local(global_position))
-	$Line2D.width = 20
 	
 	if attached:
 		var offset = attached_node.global_position - attached_node_pos
 		global_position = attached_pos + offset
 		return
+	
+	$Line2D.material.set_shader_param("rope_length", (global_position - gun.global_position).length())
 	
 	var distance = (global_position - gun.global_position).length()
 	if distance > MAX_DISTANCE:
