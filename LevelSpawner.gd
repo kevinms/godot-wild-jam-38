@@ -66,7 +66,7 @@ func randomly_place_building():
 
 var noise = OpenSimplexNoise.new()
 func get_noisy_altitude(x: float) -> float:
-	var amplitude = 2.0
+	var amplitude = 1.0
 	var frequency = 0.2
 	var y = amplitude * noise.get_noise_1d(x * frequency)
 	y *= 200.0

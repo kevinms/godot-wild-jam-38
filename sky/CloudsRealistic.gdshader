@@ -13,14 +13,18 @@ void fragment() {
 	vec4 col = vec4(0);
 	vec2 offset = camera_offset + cloud_offset;
 	
-	float clouds = texture(noise, UV+vec2(TIME*speed, 0)+offset).x;
-	clouds *= texture(noise, UV+vec2(0, TIME*speed)+offset).x;
-	clouds *= 1.2;
+	float t = TIME;
+	//st = 0.0;
+	
+	float clouds = texture(noise, UV+vec2(t*speed, 0)+offset).x;
+	clouds *= texture(noise, UV+vec2(0, t*speed)+offset).x;
+	clouds *= 1.35;
+	//clouds *= 1.34;
 	
 	// Clamp so clouds don't blow out in the center
 	//clouds = clamp(clouds, 0, .45);
 	
-	// Scale so clouds don't c
+	// Scale so clouds don't blow out in the center
 	clouds = clouds * 0.3 + .3;
 	
 	if (render_sky) {

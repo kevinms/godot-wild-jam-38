@@ -7,6 +7,7 @@ var distance = 0
 var food = 0
 var clean = 0
 var playerStartingPosition = 0
+var player_moved = false
 
 signal player_died
 signal windturbine_hit
@@ -18,6 +19,8 @@ func reset():
 	distance = 0
 	food = 0
 	clean = 0
+	playerStartingPosition = 0
+	player_moved = false
 
 func get_camera() -> Camera2D:
 	var camera: Camera2D = get_node("/root/Game/Camera2D")

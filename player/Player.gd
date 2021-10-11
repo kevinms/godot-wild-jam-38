@@ -39,6 +39,9 @@ func get_input_dir():
 		dir += Vector2.RIGHT
 		$Node2D.scale.x = 1
 	
+	if dir.length() > 0.0:
+		Global.player_moved = true
+	
 	if !Input.is_action_just_pressed("jump") and is_on_floor():
 		if Input.is_action_pressed("left"):
 				$AnimationTree.set("parameters/action/current",1)
