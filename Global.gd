@@ -6,6 +6,7 @@ var score = 0
 var distance = 0
 var food = 0
 var clean = 0
+var level_mode = 0
 var playerStartingPosition = 0
 var player_moved = false
 

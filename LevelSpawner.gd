@@ -105,7 +105,7 @@ func spawn_balloon_chain(num_balloons: int):
 func generate_object():
 	var object = null
 	
-	if is_time_for_balloon_chain():
+	if Global.level_mode == 1 and is_time_for_balloon_chain():
 		spawn_balloon_chain(randi() % 3 + 1)
 		return
 	
