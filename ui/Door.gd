@@ -8,7 +8,7 @@ func _process(delta):
 		return
 	
 	if Input.is_action_just_pressed("jump"):
-		Global.level_mode = 0
+		Global.level_mode = level_mode
 		get_tree().change_scene("res://Game.tscn")
 
 func _on_Door_body_entered(body):

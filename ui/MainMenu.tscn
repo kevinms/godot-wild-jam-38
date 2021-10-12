@@ -414,5 +414,13 @@ rotation = -3.14159
 position = Vector2( 4824.27, -7.98706 )
 rotation = -3.14159
 
-[node name="Door" parent="." instance=ExtResource( 2 )]
+[node name="DoorEasy" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1241.51, 424.482 )
+
+[node name="DoorHard" parent="." instance=ExtResource( 2 )]
+position = Vector2( 3000.95, 261.656 )
+level_mode = 1
+
+[node name="DoorSpidey" parent="." instance=ExtResource( 2 )]
+position = Vector2( 5555.36, 265.607 )
+level_mode = 2
