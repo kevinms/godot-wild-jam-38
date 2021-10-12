@@ -1,6 +1,7 @@
 extends Area2D
 
 var has_player = false
+export(int) var level_mode = 0
 
 func _process(delta):
 	if !has_player:

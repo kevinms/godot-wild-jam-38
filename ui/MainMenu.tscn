@@ -1,7 +1,7 @@
-[gd_scene load_steps=29 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://buildings/Building1.tscn" type="PackedScene" id=1]
-[ext_resource path="res://ui/Door.gd" type="Script" id=2]
+[ext_resource path="res://ui/Door.tscn" type="PackedScene" id=2]
 [ext_resource path="res://icon.png" type="Texture" id=3]
 [ext_resource path="res://Camera2D.gd" type="Script" id=4]
 [ext_resource path="res://buildings/Building2.tscn" type="PackedScene" id=5]
@@ -61,7 +61,7 @@ outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 16 )
 
-[sub_resource type="Shader" id=9]
+[sub_resource type="Shader" id=8]
 code = "shader_type canvas_item;
 render_mode blend_premul_alpha;
 
@@ -85,17 +85,14 @@ void fragment() {
 	COLOR = mix(vec4(0), vec4(1,1,0,0.5), smoothstep(0.4, 0.3, l + cos(a*PI*4.0)*0.05));
 }"
 
-[sub_resource type="ShaderMaterial" id=10]
-shader = SubResource( 9 )
+[sub_resource type="ShaderMaterial" id=9]
+shader = SubResource( 8 )
 
-[sub_resource type="DynamicFont" id=8]
+[sub_resource type="DynamicFont" id=10]
 size = 64
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 16 )
-
-[sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 31.9182, 31.9135 )
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource( 19 )
@@ -223,7 +220,7 @@ __meta__ = {
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]
-material = SubResource( 10 )
+material = SubResource( 9 )
 margin_left = -100.0
 margin_top = 41.5
 margin_right = 14.0
@@ -234,7 +231,7 @@ margin_left = -269.804
 margin_top = 73.6289
 margin_right = -1.80408
 margin_bottom = 156.629
-custom_fonts/font = SubResource( 8 )
+custom_fonts/font = SubResource( 10 )
 text = "Sol Runner"
 __meta__ = {
 "_edit_use_anchors_": false
@@ -417,15 +414,5 @@ rotation = -3.14159
 position = Vector2( 4824.27, -7.98706 )
 rotation = -3.14159
 
-[node name="Door" type="Area2D" parent="."]
-position = Vector2( 1240.84, 427.819 )
-script = ExtResource( 2 )
-
-[node name="Sprite" type="Sprite" parent="Door"]
-texture = ExtResource( 3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Door"]
-shape = SubResource( 11 )
-
-[connection signal="body_entered" from="Door" to="Door" method="_on_Door_body_entered"]
-[connection signal="body_exited" from="Door" to="Door" method="_on_Door_body_exited"]
+[node name="Door" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1241.51, 424.482 )
