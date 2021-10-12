@@ -351,9 +351,11 @@ __meta__ = {
 
 [node name="Balloon7" parent="EasyMode" instance=ExtResource( 15 )]
 position = Vector2( 497.008, 158.069 )
+respawn = true
 
 [node name="Balloon8" parent="EasyMode" instance=ExtResource( 15 )]
 position = Vector2( 865.321, 218.613 )
+respawn = true
 
 [node name="Building5" parent="EasyMode" instance=ExtResource( 5 )]
 position = Vector2( 1239.3, 597.551 )
@@ -399,12 +401,15 @@ __meta__ = {
 
 [node name="Balloon" parent="HardMode" instance=ExtResource( 15 )]
 position = Vector2( 1596.9, 188.341 )
+respawn = true
 
 [node name="Balloon2" parent="HardMode" instance=ExtResource( 15 )]
 position = Vector2( 2018.34, 136.079 )
+respawn = true
 
 [node name="Balloon3" parent="HardMode" instance=ExtResource( 15 )]
 position = Vector2( 2596.15, 129.729 )
+respawn = true
 
 [node name="Building3" parent="HardMode" instance=ExtResource( 5 )]
 position = Vector2( 3005.69, 434.982 )
@@ -440,12 +445,15 @@ __meta__ = {
 
 [node name="Balloon4" parent="SpideyMode" instance=ExtResource( 15 )]
 position = Vector2( 3446.34, 16.0789 )
+respawn = true
 
 [node name="Balloon5" parent="SpideyMode" instance=ExtResource( 15 )]
 position = Vector2( 4132.96, -22.8566 )
+respawn = true
 
 [node name="Balloon6" parent="SpideyMode" instance=ExtResource( 15 )]
 position = Vector2( 4827.31, -15.5429 )
+respawn = true
 
 [node name="SpidermanModeDir2" type="Label" parent="SpideyMode"]
 margin_left = 5479.17
