@@ -43,3 +43,4 @@ shape = SubResource( 3 )
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2( -0.529709, -200.785 )
 shape = SubResource( 4 )
+disabled = true
