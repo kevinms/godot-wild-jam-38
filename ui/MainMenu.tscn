@@ -332,10 +332,10 @@ position = Vector2( 1241.04, 407.745 )
 [node name="HardMode" type="Node2D" parent="."]
 
 [node name="HardModeDir" type="Label" parent="HardMode"]
-margin_left = 1435.06
-margin_top = 358.158
-margin_right = 1629.06
-margin_bottom = 441.158
+margin_left = 1517.65
+margin_top = 415.734
+margin_right = 1711.65
+margin_bottom = 498.734
 custom_fonts/font = SubResource( 7 )
 text = "Hard Mode -->"
 __meta__ = {
@@ -343,10 +343,10 @@ __meta__ = {
 }
 
 [node name="HelpHook2" type="Label" parent="HardMode"]
-margin_left = 1442.18
-margin_top = 404.659
-margin_right = 1648.18
-margin_bottom = 522.659
+margin_left = 1524.77
+margin_top = 462.235
+margin_right = 1730.77
+margin_bottom = 580.235
 custom_fonts/font = ExtResource( 20 )
 text = "Use movement while swinging to increase speed."
 autowrap = true
