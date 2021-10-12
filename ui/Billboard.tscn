@@ -1,0 +1,26 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://fonts/ExtraLargeText.tres" type="DynamicFont" id=1]
+[ext_resource path="res://ui/Billboard.gd" type="Script" id=2]
+
+[node name="Billboard" type="Node2D"]
+z_index = 4096
+script = ExtResource( 2 )
+
+[node name="Board" type="Node2D" parent="."]
+
+[node name="Text" type="Label" parent="Board"]
+margin_left = -95.6461
+margin_top = -184.012
+margin_right = 92.3539
+margin_bottom = -133.012
+grow_horizontal = 2
+grow_vertical = 2
+custom_fonts/font = ExtResource( 1 )
+text = "Hard Mode"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]

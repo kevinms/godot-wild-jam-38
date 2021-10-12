@@ -23,6 +23,9 @@ func reset():
 	playerStartingPosition = 0
 	player_moved = false
 
+func get_feet():
+	return (Global.distance - Global.playerStartingPosition) / 12
+
 func get_player() -> Node:
 	var players = get_tree().get_nodes_in_group("player")
 	if players.size() <= 0:
