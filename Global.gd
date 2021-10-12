@@ -23,6 +23,13 @@ func reset():
 	playerStartingPosition = 0
 	player_moved = false
 
+func get_player() -> Node:
+	var players = get_tree().get_nodes_in_group("player")
+	if players.size() <= 0:
+		push_error("No players?!")
+		return null
+	return players[0]
+
 func get_camera() -> Camera2D:
 	var camera: Camera2D = get_node("/root/Game/Camera2D")
 	if camera == null:

@@ -1,24 +1,105 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://ui/Door.gd" type="Script" id=1]
 [ext_resource path="res://ui/portal.png" type="Texture" id=2]
+[ext_resource path="res://ui/DoorEffect.gdshader" type="Shader" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 27.6263, 39.9274 )
+
+[sub_resource type="OpenSimplexNoise" id=5]
+octaves = 5
+period = 67.2
+
+[sub_resource type="NoiseTexture" id=6]
+seamless = true
+noise = SubResource( 5 )
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 3 )
+shader_param/effect_strength = 0.0
+shader_param/noise = SubResource( 6 )
+
+[sub_resource type="Animation" id=7]
+resource_name = "collapse"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/effect_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.3, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.243, 0.243, 2.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3, 1.1, 1.3 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.201098, 0.201098 ), Vector2( 0.5, 0.5 ), Vector2( 0.201098, 0.201098 ), Vector2( 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "worble"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:material:shader_param/effect_strength")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 0.0, 0.257 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0.201098, 0.201098 ), Vector2( 0.3, 0.3 ) ]
+}
 
 [node name="Door" type="Area2D"]
 collision_layer = 16
 collision_mask = 16
 script = ExtResource( 1 )
 
-[node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 1.05908, 6.82373 )
-scale = Vector2( 0.192437, 0.192437 )
-texture = ExtResource( 2 )
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 1.76657, 6.35681 )
 shape = SubResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+material = SubResource( 3 )
+position = Vector2( 1.05908, 6.82373 )
+scale = Vector2( 0.201098, 0.201098 )
+texture = ExtResource( 2 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/collapse = SubResource( 7 )
+anims/worble = SubResource( 4 )
+
+[node name="CollapseSound" type="AudioStreamPlayer" parent="."]
+
+[node name="WorbleSound" type="AudioStreamPlayer" parent="."]
+
+[node name="Tween" type="Tween" parent="."]
 
 [connection signal="body_entered" from="." to="." method="_on_Door_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_Door_body_exited"]

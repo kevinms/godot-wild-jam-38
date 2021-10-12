@@ -36,8 +36,8 @@ func _on_BalloonArea_body_entered(body: Node):
 	$"balloon-cloth".visible = false
 	#$BalloonArea.monitoring = false
 	#$BalloonArea.monitorable = false
-	#$BalloonArea.collision_layer = 0
-	#$BalloonArea.collision_mask = 0
+	$BalloonArea.collision_layer = 0
+	$BalloonArea.collision_mask = 0
 	popped = true
 	
 	$PopSound.play()

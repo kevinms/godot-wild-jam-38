@@ -1,10 +1,11 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://player/player.svg" type="Texture" id=1]
 [ext_resource path="res://player/Player.gd" type="Script" id=2]
 [ext_resource path="res://sfx/Jump1.mp3" type="AudioStream" id=3]
 [ext_resource path="res://player/playerBones.svg" type="Texture" id=4]
 [ext_resource path="res://grapple/GrappleGun.tscn" type="PackedScene" id=5]
+[ext_resource path="res://sfx/PlayRandomSound.gd" type="Script" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 6.77242, 13.2984 )
@@ -2105,7 +2106,7 @@ input_8/name = "state 8"
 input_8/auto_advance = false
 
 [sub_resource type="AnimationNodeBlendTree" id=21]
-graph_offset = Vector2( 0, 458.5 )
+graph_offset = Vector2( 91, 241 )
 nodes/Animation/node = SubResource( 11 )
 nodes/Animation/position = Vector2( 300, 720 )
 nodes/DeathCurl/node = SubResource( 12 )
@@ -2129,7 +2130,9 @@ nodes/action/position = Vector2( 780, 200 )
 nodes/output/position = Vector2( 1340, 180 )
 node_connections = [ "action", 0, "Standing", "action", 1, "Running", "action", 2, "Jumping", "action", 3, "OnWall", "action", 4, "WallJump", "action", 5, "JumpKick", "action", 6, "Animation", "action", 7, "DeathCurl", "action", 8, "Ragdoll", "output", 0, "action" ]
 
-[node name="Player" type="KinematicBody2D"]
+[node name="Player" type="KinematicBody2D" groups=[
+"player",
+]]
 z_index = 1
 collision_mask = 31
 script = ExtResource( 2 )
@@ -2167,6 +2170,9 @@ collision_mask = 2
 [node name="JumpSound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
 volume_db = -16.0
+script = ExtResource( 6 )
+modulate_pitch = true
+use_library = false
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 autoplay = "Standing"

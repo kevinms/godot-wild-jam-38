@@ -13,16 +13,27 @@ const NUM_AIR_JUMPS = 1
 var air_jumps_left = NUM_AIR_JUMPS
 
 var velocity = Vector2.ZERO
-
+var freeze = false
 
 onready var camera = Global.get_camera()
 onready var GrappleGun = $Node2D/GrappleGun
 
 func _ready():
+	#$JumpSound.register_sound(preload("res://sfx/Jump1.mp3"))
+	#$JumpSound.register_sound(preload("res://sfx/Jump2.mp3"))
+	#$JumpSound.register_sound(preload("res://sfx/Jump3.mp3"))
+	#$JumpSound.register_sound(preload("res://sfx/Jump4.mp3"))
+	#$JumpSound.register_sound(preload("res://sfx/Jump5.mp3"))
+	
 	Global.connect("windturbine_hit", self, "on_windturbine_hit")
 
 func on_windturbine_hit():
 	velocity = (Vector2.RIGHT + Vector2.UP) * 1000.0
+	$AnimationTree.set("parameters/action/current",8)
+
+func portal_warp():
+	freeze = true
+	reset()
 	$AnimationTree.set("parameters/action/current",8)
 
 func reset():
@@ -61,6 +72,9 @@ func get_input_dir():
 	return dir.normalized()
 
 func _process(delta):
+	if freeze:
+		return
+	
 	if Input.is_action_just_pressed("fire"):
 		print("grapple!")
 		GrappleGun.fire()
