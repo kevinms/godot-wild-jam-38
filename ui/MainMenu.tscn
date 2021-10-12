@@ -326,6 +326,9 @@ __meta__ = {
 [node name="Building5" parent="EasyMode" instance=ExtResource( 5 )]
 position = Vector2( 1239.3, 597.551 )
 
+[node name="DoorEasy" parent="EasyMode" instance=ExtResource( 2 )]
+position = Vector2( 1241.04, 407.745 )
+
 [node name="HardMode" type="Node2D" parent="."]
 
 [node name="HardModeDir" type="Label" parent="HardMode"]
@@ -362,6 +365,10 @@ position = Vector2( 2596.15, 129.729 )
 
 [node name="Building3" parent="HardMode" instance=ExtResource( 5 )]
 position = Vector2( 3005.69, 434.982 )
+
+[node name="DoorHard" parent="HardMode" instance=ExtResource( 2 )]
+position = Vector2( 3004.04, 247.625 )
+level_mode = 1
 
 [node name="SpideyMode" type="Node2D" parent="."]
 
@@ -414,13 +421,6 @@ rotation = -3.14159
 position = Vector2( 4824.27, -7.98706 )
 rotation = -3.14159
 
-[node name="DoorEasy" parent="." instance=ExtResource( 2 )]
-position = Vector2( 1240.1, 409.633 )
-
-[node name="DoorHard" parent="." instance=ExtResource( 2 )]
-position = Vector2( 3004.04, 247.625 )
-level_mode = 1
-
-[node name="DoorSpidey" parent="." instance=ExtResource( 2 )]
+[node name="DoorSpidey" parent="SpideyMode" instance=ExtResource( 2 )]
 position = Vector2( 5556.55, 250.527 )
 level_mode = 2
