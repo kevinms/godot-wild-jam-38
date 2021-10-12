@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg8"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
+   sodipodi:docname="Portal.svg">
+  <defs
+     id="defs2">
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter1549"
+       x="-0.12509118"
+       width="1.2501824"
+       y="-0.1261504"
+       height="1.2523008">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="1.9059206"
+         id="feGaussianBlur1551" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter2165"
+       x="-0.17094765"
+       width="1.3418953"
+       y="-0.15693553"
+       height="1.3138711">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="6.0306531"
+         id="feGaussianBlur2167" />
+    </filter>
+    <filter
+       inkscape:collect="always"
+       style="color-interpolation-filters:sRGB"
+       id="filter2573"
+       x="-0.045480426"
+       width="1.0909609"
+       y="-0.043759544"
+       height="1.0875191">
+      <feGaussianBlur
+         inkscape:collect="always"
+         stdDeviation="0.45076763"
+         id="feGaussianBlur2575" />
+    </filter>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1.4"
+     inkscape:cx="428.3798"
+     inkscape:cy="401.65358"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     inkscape:document-rotation="0"
+     showgrid="false"
+     inkscape:window-width="2560"
+     inkscape:window-height="1389"
+     inkscape:window-x="4472"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <ellipse
+       style="fill:#000000;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:square;stroke-linejoin:bevel;filter:url(#filter2165)"
+       id="path833"
+       cx="98.651772"
+       cy="136.4494"
+       rx="42.333332"
+       ry="46.113098"
+       transform="matrix(1,0,0,1.4057377,0,-74.072486)" />
+    <path
+       sodipodi:type="star"
+       style="fill:#562094;fill-opacity:1;fill-rule:evenodd;stroke:#532b8e;stroke-width:0;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;filter:url(#filter1549)"
+       id="path1297"
+       sodipodi:sides="14"
+       sodipodi:cx="28.464207"
+       sodipodi:cy="100.49334"
+       sodipodi:r1="15.401205"
+       sodipodi:r2="18.334768"
+       sodipodi:arg1="1.0471976"
+       sodipodi:arg2="1.2715971"
+       inkscape:flatsided="false"
+       inkscape:rounded="0"
+       inkscape:randomized="0"
+       d="m 36.164809,113.83117 -2.296336,4.18238 -4.253334,-2.16207 -3.883589,2.77184 -2.894036,-3.7934 -4.701651,0.81232 -0.961539,-4.67342 -4.588493,-1.3081 1.161403,-4.6278 -3.566528,-3.16942 3.054314,-3.665592 -1.838167,-4.403013 4.342281,-1.977364 0.254264,-4.764529 4.770207,0.102502 2.296335,-4.182371 4.253334,2.162066 3.883589,-2.771843 2.894036,3.793406 4.701652,-0.812318 0.961538,4.673416 4.588493,1.308097 -1.161402,4.627798 3.566527,3.169427 -3.054314,3.665588 1.838168,4.40301 -4.342282,1.97737 -0.254264,4.76453 z"
+       transform="matrix(1.7674488,0,0,2.7889833,47.668185,-161.55524)" />
+    <ellipse
+       style="opacity:1;fill:#ececec;fill-opacity:1;fill-rule:evenodd;stroke:#00ff00;stroke-width:0.915378;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter2573)"
+       id="path1553"
+       cx="98.087914"
+       cy="134.77065"
+       rx="11.893494"
+       ry="12.361216"
+       transform="matrix(1.632345,0,0,2.9244606,-62.025403,-275.51928)" />
+  </g>
+</svg>
