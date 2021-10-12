@@ -10,9 +10,9 @@ script = ExtResource( 4 )
 
 [node name="Title" type="Label" parent="."]
 margin_left = -95.6461
-margin_top = -126.614
+margin_top = -184.012
 margin_right = 92.3539
-margin_bottom = -75.6138
+margin_bottom = -133.012
 custom_fonts/font = ExtResource( 1 )
 text = "Game Over"
 __meta__ = {
@@ -47,9 +47,9 @@ __meta__ = {
 
 [node name="Grid" type="GridContainer" parent="."]
 margin_left = -130.13
-margin_top = 16.2164
+margin_top = -41.1816
 margin_right = 182.87
-margin_bottom = 181.217
+margin_bottom = 123.819
 custom_constants/hseparation = 14
 columns = 2
 __meta__ = {
@@ -117,3 +117,39 @@ text = "20m"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Retry" type="Button" parent="."]
+margin_left = -166.855
+margin_top = 116.798
+margin_right = -9.85455
+margin_bottom = 162.798
+custom_fonts/font = ExtResource( 3 )
+text = "Try Again"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RetryHint" type="Label" parent="."]
+margin_left = -132.8
+margin_top = 187.666
+margin_right = 155.2
+margin_bottom = 217.666
+custom_fonts/font = ExtResource( 2 )
+text = "Press Space or Enter to try again"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainMenu" type="Button" parent="."]
+margin_left = 10.0114
+margin_top = 116.798
+margin_right = 167.011
+margin_bottom = 162.798
+custom_fonts/font = ExtResource( 3 )
+text = "Main Menu"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Retry" to="." method="_on_MainMenu_pressed"]
+[connection signal="pressed" from="MainMenu" to="." method="_on_MainMenu_pressed"]

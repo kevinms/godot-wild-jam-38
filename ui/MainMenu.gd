@@ -3,9 +3,11 @@ extends Node2D
 onready var starting_player_pos = $Player.global_position
 
 func _ready():
+	Global.reset()
 	Global.connect("windturbine_hit", self, "on_windturbine_hit")
 
 func reset():
+	Global.reset()
 	$DeathSound.play()
 	$Player.reset()
 	$Player.global_position = $PlayerSpawn.global_position
