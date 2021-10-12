@@ -44,7 +44,13 @@ func move_camera(delta: float):
 	player_pos.x += view_size.x/5
 	
 	#TODO: increase camera speed over time, but set a limit so players can go infinite
-	camera_pos.x += 100 * delta
+	var camera_speed_mod = clamp(((int((Global.distance - Global.playerStartingPosition)/12) - 2000)/2000) + 1,1,2)
+	if Global.level_mode == 0:
+		camera_pos.x += 100 * delta
+	elif Global.level_mode == 1:
+		camera_pos.x += (100 * camera_speed_mod) * delta
+	elif Global.level_mode == 2:
+		camera_pos.x += 100 * delta
 	if player_pos.x > camera_pos.x:
 		#camera_pos.x = lerp(camera_pos.x, player_pos.x, 3.0*delta)
 		camera_pos.x = lerp(camera_pos.x, player_pos.x, 6.0*delta)

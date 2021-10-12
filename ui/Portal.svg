@@ -13,7 +13,10 @@
    version="1.1"
    id="svg8"
    inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)"
-   sodipodi:docname="Portal.svg">
+   sodipodi:docname="Portal.svg"
+   inkscape:export-filename="C:\Users\marsh\Documents\Godot\godot-wild-jam-38\ui\portal.png"
+   inkscape:export-xdpi="96"
+   inkscape:export-ydpi="96">
   <defs
      id="defs2">
     <filter
@@ -64,8 +67,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.4"
-     inkscape:cx="428.3798"
-     inkscape:cy="401.65358"
+     inkscape:cx="639.73611"
+     inkscape:cy="382.15873"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      inkscape:document-rotation="0"
@@ -92,7 +95,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <ellipse
-       style="fill:#000000;fill-rule:evenodd;stroke:#ffffff;stroke-width:0;stroke-linecap:square;stroke-linejoin:bevel;filter:url(#filter2165)"
+       style="fill:#2a4e38;fill-rule:evenodd;stroke:#338200;stroke-width:0;stroke-linecap:square;stroke-linejoin:bevel;filter:url(#filter2165);stroke-opacity:1;fill-opacity:1"
        id="path833"
        cx="98.651772"
        cy="136.4494"
@@ -101,7 +104,7 @@
        transform="matrix(1,0,0,1.4057377,0,-74.072486)" />
     <path
        sodipodi:type="star"
-       style="fill:#562094;fill-opacity:1;fill-rule:evenodd;stroke:#532b8e;stroke-width:0;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;filter:url(#filter1549)"
+       style="fill:#f7ff1f;fill-opacity:1;fill-rule:evenodd;stroke:#e3ff26;stroke-width:0;stroke-linecap:square;stroke-linejoin:bevel;stroke-opacity:1;filter:url(#filter1549)"
        id="path1297"
        sodipodi:sides="14"
        sodipodi:cx="28.464207"
@@ -116,7 +119,7 @@
        d="m 36.164809,113.83117 -2.296336,4.18238 -4.253334,-2.16207 -3.883589,2.77184 -2.894036,-3.7934 -4.701651,0.81232 -0.961539,-4.67342 -4.588493,-1.3081 1.161403,-4.6278 -3.566528,-3.16942 3.054314,-3.665592 -1.838167,-4.403013 4.342281,-1.977364 0.254264,-4.764529 4.770207,0.102502 2.296335,-4.182371 4.253334,2.162066 3.883589,-2.771843 2.894036,3.793406 4.701652,-0.812318 0.961538,4.673416 4.588493,1.308097 -1.161402,4.627798 3.566527,3.169427 -3.054314,3.665588 1.838168,4.40301 -4.342282,1.97737 -0.254264,4.76453 z"
        transform="matrix(1.7674488,0,0,2.7889833,47.668185,-161.55524)" />
     <ellipse
-       style="opacity:1;fill:#ececec;fill-opacity:1;fill-rule:evenodd;stroke:#00ff00;stroke-width:0.915378;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter2573)"
+       style="opacity:1;fill:#ecf9ff;fill-opacity:1;fill-rule:evenodd;stroke:#dabb00;stroke-width:0.915378;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;filter:url(#filter2573)"
        id="path1553"
        cx="98.087914"
        cy="134.77065"
