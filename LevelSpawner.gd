@@ -87,11 +87,12 @@ func get_noisy_altitude(x: float) -> float:
 const TURBINE_THRESHOLD = 500
 const TURBINE_INCREASE_OVER_DIST = 10000
 
-var till_balloon_chain = 10
+const BOOLCHAIN_INTERVAL = 5
+var till_balloon_chain = BOOLCHAIN_INTERVAL
 func is_time_for_balloon_chain():
 	till_balloon_chain -= 1
 	if till_balloon_chain <= 0:
-		till_balloon_chain = 10
+		till_balloon_chain = BOOLCHAIN_INTERVAL
 		return true
 	return false
 
@@ -106,7 +107,7 @@ func generate_object():
 	var object = null
 	
 	if Global.level_mode == 1 and is_time_for_balloon_chain():
-		spawn_balloon_chain(randi() % 3 + 1)
+		spawn_balloon_chain(floor(rand_range(3, 4)))
 		return
 	
 	var xoff = rand_range(200, 1000)
