@@ -144,7 +144,7 @@ motion_scale = Vector2( 0.5, 0.5 )
 motion_mirroring = Vector2( 4000, 0 )
 
 [node name="Sprite" type="Sprite" parent="ParallaxBackground/ParallaxLayer"]
-position = Vector2( 1460.5, -911.969 )
+position = Vector2( 1460.5, -900.643 )
 scale = Vector2( 0.43934, 0.412944 )
 z_index = 1
 z_as_relative = false
