@@ -339,17 +339,17 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="457.65886"
-     inkscape:cy="160.17409"
+     inkscape:zoom="5.6568543"
+     inkscape:cx="393.56087"
+     inkscape:cy="258.7232"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer2"
+     inkscape:current-layer="layer6"
      inkscape:document-rotation="0"
      showgrid="false"
      inkscape:window-width="1531"
      inkscape:window-height="1051"
-     inkscape:window-x="3458"
-     inkscape:window-y="199"
+     inkscape:window-x="3085"
+     inkscape:window-y="279"
      inkscape:window-maximized="0" />
   <metadata
      id="metadata1396">
@@ -372,7 +372,7 @@
        id="g3936-8-1-0"
        style="display:inline;fill:#636160;fill-opacity:1;stroke:#000000;stroke-width:1.49847;stroke-opacity:1"
        transform="matrix(0,-0.47238516,0.94278607,0,-107.34073,276.61741)"
-       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windmill/blade.png"
+       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windturbine/blade.png"
        inkscape:export-xdpi="444.71399"
        inkscape:export-ydpi="444.71399">
       <rect
@@ -394,7 +394,7 @@
        id="g3936-8-1-0-8"
        style="display:inline;fill:#636160;fill-opacity:1;stroke:#000000;stroke-width:1.49847;stroke-opacity:1"
        transform="matrix(0,-0.47238515,0.94278606,0,-89.614077,276.09504)"
-       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windmill/blade.png"
+       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windturbine/blade.png"
        inkscape:export-xdpi="444.71399"
        inkscape:export-ydpi="444.71399">
       <rect
@@ -416,7 +416,7 @@
        id="g3936-8-1-0-6"
        style="display:inline;fill:#636160;fill-opacity:1;stroke:#000000;stroke-width:1.49847;stroke-opacity:1"
        transform="matrix(0.47238515,0,0,0.94278606,56.548622,30.683944)"
-       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windmill/blade.png"
+       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windturbine/blade.png"
        inkscape:export-xdpi="444.71399"
        inkscape:export-ydpi="444.71399">
       <rect
@@ -438,7 +438,7 @@
        id="g3936-8-1-0-4"
        style="display:inline;fill:#636160;fill-opacity:1;stroke:#000000;stroke-width:1.49847;stroke-opacity:1"
        transform="matrix(-0.47238515,0,0,-0.94278606,155.79702,421.72747)"
-       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windmill/blade.png"
+       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windturbine/blade.png"
        inkscape:export-xdpi="444.71399"
        inkscape:export-ydpi="444.71399">
       <rect
@@ -7156,7 +7156,7 @@
        inkscape:export-ydpi="1248" />
     <g
        id="g3936"
-       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windmill/blade.png"
+       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windturbine/blade.png"
        inkscape:export-xdpi="444.71399"
        inkscape:export-ydpi="444.71399">
       <rect
@@ -7178,7 +7178,7 @@
        id="g3936-8"
        style="display:inline"
        transform="rotate(90,106.17282,226.47084)"
-       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windmill/blade.png"
+       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windturbine/blade.png"
        inkscape:export-xdpi="444.71399"
        inkscape:export-ydpi="444.71399">
       <rect
@@ -7200,7 +7200,7 @@
        id="g3936-8-8"
        style="display:inline"
        transform="rotate(180,106.17282,226.47084)"
-       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windmill/blade.png"
+       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windturbine/blade.png"
        inkscape:export-xdpi="444.71399"
        inkscape:export-ydpi="444.71399">
       <rect
@@ -7222,7 +7222,7 @@
        id="g3936-8-1"
        style="display:inline"
        transform="rotate(-90,106.17282,226.47084)"
-       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windmill/blade.png"
+       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windturbine/blade.png"
        inkscape:export-xdpi="444.71399"
        inkscape:export-ydpi="444.71399">
       <rect
@@ -7247,7 +7247,7 @@
        height="0.35079125"
        x="87.370415"
        y="226.12006"
-       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windmill/blade.png"
+       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windturbine/blade.png"
        inkscape:export-xdpi="444.71399"
        inkscape:export-ydpi="444.71399" />
     <rect
@@ -7257,7 +7257,7 @@
        height="0.35079125"
        x="114.59181"
        y="226.47084"
-       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windmill/blade.png"
+       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windturbine/blade.png"
        inkscape:export-xdpi="444.71399"
        inkscape:export-ydpi="444.71399" />
     <rect
@@ -7268,7 +7268,7 @@
        x="-218.05185"
        y="106.17282"
        transform="rotate(-90)"
-       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windmill/blade.png"
+       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windturbine/blade.png"
        inkscape:export-xdpi="444.71399"
        inkscape:export-ydpi="444.71399" />
     <rect
@@ -7279,7 +7279,81 @@
        x="234.88983"
        y="-106.17282"
        transform="rotate(90)"
-       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windmill/blade.png"
+       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windturbine/blade.png"
+       inkscape:export-xdpi="444.71399"
+       inkscape:export-ydpi="444.71399" />
+    <path
+       style="fill:#cc2fb8;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;fill-opacity:1"
+       d="m 105.56875,207.16569 -0.51846,0.50273 1.61813,0.01 -0.51263,-0.50436 z"
+       id="path1654"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windturbine/blade.png"
+       inkscape:export-xdpi="444.71399"
+       inkscape:export-ydpi="444.71399" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path1656"
+       d="m 125.47796,225.86677 -0.50273,-0.51846 -0.01,1.61813 0.50436,-0.51263 z"
+       style="fill:#cc2fb8;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windturbine/blade.png"
+       inkscape:export-xdpi="444.71399"
+       inkscape:export-ydpi="444.71399" />
+    <path
+       style="fill:#cc2fb8;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 86.867677,227.07491 0.50273,0.51846 0.01,-1.61813 -0.50436,0.51263 z"
+       id="path1658"
+       inkscape:connector-curvature="0"
+       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windturbine/blade.png"
+       inkscape:export-xdpi="444.71399"
+       inkscape:export-ydpi="444.71399" />
+    <path
+       inkscape:connector-curvature="0"
+       id="path1660"
+       d="m 106.78292,245.77497 0.51571,-0.50556 -1.61816,-0.001 0.51537,0.50156 z"
+       style="fill:#cc2fb8;fill-opacity:1;stroke:none;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windturbine/blade.png"
+       inkscape:export-xdpi="444.71399"
+       inkscape:export-ydpi="444.71399" />
+    <rect
+       style="fill:#cc2fb8;fill-opacity:1;stroke:none;stroke-width:0.86500001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1662"
+       width="1.6194814"
+       height="0.39138269"
+       x="105.05029"
+       y="207.66841"
+       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windturbine/blade.png"
+       inkscape:export-xdpi="444.71399"
+       inkscape:export-ydpi="444.71399" />
+    <rect
+       y="244.87802"
+       x="105.67915"
+       height="0.39138269"
+       width="1.6194814"
+       id="rect1664"
+       style="fill:#cc2fb8;fill-opacity:1;stroke:none;stroke-width:0.86500001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windturbine/blade.png"
+       inkscape:export-xdpi="444.71399"
+       inkscape:export-ydpi="444.71399" />
+    <rect
+       style="fill:#cc2fb8;fill-opacity:1;stroke:none;stroke-width:0.86500001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       id="rect1666"
+       width="1.6194814"
+       height="0.39138269"
+       x="225.34697"
+       y="-124.97693"
+       transform="rotate(90)"
+       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windturbine/blade.png"
+       inkscape:export-xdpi="444.71399"
+       inkscape:export-ydpi="444.71399" />
+    <rect
+       transform="rotate(90)"
+       y="-87.761787"
+       x="225.97389"
+       height="0.39138269"
+       width="1.6194814"
+       id="rect1668"
+       style="fill:#cc2fb8;fill-opacity:1;stroke:none;stroke-width:0.86500001;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       inkscape:export-filename="/home/kevin/dev/godot/godot-wild-jam-38/windturbine/blade.png"
        inkscape:export-xdpi="444.71399"
        inkscape:export-ydpi="444.71399" />
   </g>
