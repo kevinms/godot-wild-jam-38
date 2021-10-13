@@ -29,13 +29,13 @@ radius = 114.998
 [sub_resource type="RectangleShape2D" id=4]
 extents = Vector2( 41.9769, 34.551 )
 
-[sub_resource type="AnimationNodeAnimation" id=7]
+[sub_resource type="AnimationNodeAnimation" id=5]
 animation = "BalloonPopped"
 
-[sub_resource type="AnimationNodeAnimation" id=8]
+[sub_resource type="AnimationNodeAnimation" id=6]
 animation = "BalloonNormal"
 
-[sub_resource type="AnimationNodeTransition" id=9]
+[sub_resource type="AnimationNodeTransition" id=7]
 input_count = 2
 xfade_time = 0.35
 input_0/name = "state 0"
@@ -43,18 +43,17 @@ input_0/auto_advance = false
 input_1/name = "state 1"
 input_1/auto_advance = false
 
-[sub_resource type="AnimationNodeBlendTree" id=10]
-nodes/Animation/node = SubResource( 8 )
+[sub_resource type="AnimationNodeBlendTree" id=8]
+nodes/Animation/node = SubResource( 6 )
 nodes/Animation/position = Vector2( 180, 140 )
-"nodes/Animation 2/node" = SubResource( 7 )
+"nodes/Animation 2/node" = SubResource( 5 )
 "nodes/Animation 2/position" = Vector2( 200, 300 )
 nodes/output/position = Vector2( 800, 100 )
-nodes/transition/node = SubResource( 9 )
+nodes/transition/node = SubResource( 7 )
 nodes/transition/position = Vector2( 500, 160 )
 node_connections = [ "output", 0, "transition", "transition", 0, "Animation", "transition", 1, "Animation 2" ]
 
-[sub_resource type="Animation" id=5]
-resource_name = "BalloonNormal"
+[sub_resource type="Animation" id=9]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Skeleton2D/RightSideRopeBasket:position")
 tracks/0/interp = 1
@@ -176,8 +175,7 @@ tracks/9/keys = {
 "values": [ 0.0 ]
 }
 
-[sub_resource type="Animation" id=6]
-resource_name = "BalloonPopped"
+[sub_resource type="Animation" id=10]
 tracks/0/type = "value"
 tracks/0/path = NodePath("Skeleton2D/RightSideRopeBasket:position")
 tracks/0/interp = 1
@@ -294,7 +292,7 @@ texture = ExtResource( 4 )
 skeleton = NodePath("../Skeleton2D")
 polygon = PoolVector2Array( -4.39444, -2.46709, 10, -1.52588e-05, 70, 150, 119.319, 147.434, 230, 150, 290, -7.62939e-06, 303.573, -1.174, 250, 160, 250, 310, 50, 310, 50, 160 )
 uv = PoolVector2Array( -4.39444, -2.46709, 10, -1.52588e-05, 70, 150, 119.319, 147.434, 230, 150, 290, -7.62939e-06, 303.573, -1.174, 250, 160, 250, 310, 50, 310, 50, 160 )
-polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14 ) ]
+polygons = [ PoolIntArray( 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 ) ]
 bones = [ NodePath("RightSideRopeBasket"), PoolRealArray( 0, 0, 0, 0, 1, 0, 0, 1, 1, 0, 0 ), NodePath("RightSideRopeBasket/RightSideRope"), PoolRealArray( 0, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0 ), NodePath("BasketLeft"), PoolRealArray( 0, 0, 1, 1, 0, 0, 0, 0, 0, 1, 1 ), NodePath("BasketLeft/LeftSideRope"), PoolRealArray( 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, 1 ) ]
 
 [node name="balloon-cloth" type="Sprite" parent="."]
@@ -323,14 +321,14 @@ shape = SubResource( 3 )
 stream = ExtResource( 5 )
 
 [node name="AnimationTree" type="AnimationTree" parent="."]
-tree_root = SubResource( 10 )
+tree_root = SubResource( 8 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/transition/current = 0
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/BalloonNormal = SubResource( 5 )
-anims/BalloonPopped = SubResource( 6 )
+anims/BalloonNormal = SubResource( 9 )
+anims/BalloonPopped = SubResource( 10 )
 
 [node name="Skeleton2D" type="Skeleton2D" parent="."]
 visible = false
@@ -349,7 +347,7 @@ default_length = 80.0
 
 [node name="BasketLeft" type="Bone2D" parent="Skeleton2D"]
 position = Vector2( -39.9648, 32.8722 )
-rotation = 4.71238
+rotation = 4.71237
 rest = Transform2D( -9.04798e-06, -1, 1, -9.04798e-06, -39.9648, 32.8722 )
 default_length = 70.0
 
