@@ -16,7 +16,6 @@ func _ready():
 	
 	# Distribute the panels across the width at the height
 	var start = -building_size / 2 + Vector2(0, -panel_half_size.y)
-	var end = start + Vector2(building_size.x - panel_size.x, 0)
 	
 	var per_panel = panel_size.x * 1.3
 	var panel_count = building_size.x / per_panel
