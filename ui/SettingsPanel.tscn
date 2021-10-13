@@ -1,76 +1,89 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://ui/HudFont.tres" type="DynamicFont" id=1]
+[ext_resource path="res://fonts/LargeText.tres" type="DynamicFont" id=1]
 [ext_resource path="res://ui/SettingsPanel.gd" type="Script" id=2]
+[ext_resource path="res://fonts/ExtraLargeText.tres" type="DynamicFont" id=3]
 
 [node name="SettingsPanel" type="Node2D"]
+pause_mode = 2
 script = ExtResource( 2 )
 
-[node name="Title" type="Label" parent="."]
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 110.0
-margin_bottom = 58.0
-custom_fonts/font = ExtResource( 1 )
+[node name="Panel" type="Panel" parent="."]
+margin_left = -269.054
+margin_top = -194.405
+margin_right = 259.946
+margin_bottom = 159.595
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Title" type="Label" parent="Panel"]
+margin_left = 194.741
+margin_top = 26.5609
+margin_right = 322.741
+margin_bottom = 80.5609
+custom_fonts/font = ExtResource( 3 )
 text = "Settings"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="GridContainer" type="GridContainer" parent="."]
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 110.0
-margin_bottom = 58.0
-columns = 2
+[node name="Settings" type="Node2D" parent="Panel"]
+position = Vector2( 172.016, 254.989 )
+
+[node name="VolumeLabel" type="Label" parent="Panel/Settings"]
+margin_left = -108.854
+margin_top = -140.961
+margin_right = -2.85385
+margin_bottom = -100.961
+custom_fonts/font = ExtResource( 1 )
+text = "Volume:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VolumeLabel" type="Label" parent="GridContainer"]
-margin_right = 78.0
-margin_bottom = 25.0
+[node name="Volume" type="HSlider" parent="Panel/Settings"]
+margin_left = 18.1956
+margin_top = -131.522
+margin_right = 168.196
+margin_bottom = -115.522
+rect_scale = Vector2( 2, 2 )
+min_value = -40.0
+max_value = 12.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FullscreenLabel" type="Label" parent="Panel/Settings"]
+margin_left = -135.754
+margin_top = -96.8457
+margin_right = -2.75427
+margin_bottom = -56.8457
 custom_fonts/font = ExtResource( 1 )
-text = "Volume"
+text = "Fullscreen:"
 
-[node name="Volume" type="HSlider" parent="GridContainer"]
-margin_left = 82.0
-margin_right = 106.0
-margin_bottom = 16.0
+[node name="Fullscreen" type="CheckBox" parent="Panel/Settings"]
+margin_left = 6.04791
+margin_top = -96.0245
+margin_right = 30.0479
+margin_bottom = -72.0245
+rect_scale = Vector2( 2, 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
-[node name="FullscreenLabel" type="Label" parent="GridContainer"]
-margin_top = 29.0
-margin_right = 78.0
-margin_bottom = 54.0
-custom_fonts/font = ExtResource( 1 )
-text = "Fullscreen"
-
-[node name="Fullscreen" type="CheckBox" parent="GridContainer"]
-margin_left = 82.0
-margin_top = 29.0
-margin_right = 106.0
-margin_bottom = 54.0
-
-[node name="Resume" type="Button" parent="."]
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 110.0
-margin_bottom = 58.0
+[node name="Resume" type="Button" parent="Panel"]
+margin_left = 214.731
+margin_top = 276.844
+margin_right = 320.731
+margin_bottom = 330.844
 text = "Resume"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="MainMenu" type="Button" parent="."]
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 110.0
-margin_bottom = 58.0
-text = "Main Menu"
+[node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="Quit" type="Button" parent="."]
-margin_left = 4.0
-margin_top = 4.0
-margin_right = 110.0
-margin_bottom = 58.0
-text = "Quit"
+[connection signal="value_changed" from="Panel/Settings/Volume" to="." method="_on_Volume_value_changed"]
+[connection signal="toggled" from="Panel/Settings/Fullscreen" to="." method="_on_Fullscreen_toggled"]
+[connection signal="pressed" from="Panel/Resume" to="." method="_on_Resume_pressed"]

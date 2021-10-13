@@ -8,7 +8,10 @@ var paused = false
 func _ready():
 	#Input.set_custom_mouse_cursor(cursor, Input.CURSOR_ARROW, Vector2(16,16))
 	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-	pass
+	$Panel/Settings/Fullscreen.pressed = OS.window_fullscreen
+	$Panel/Settings/Volume.value = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master"))
+	
+	hide()
 
 func pause():
 	print('pause')
@@ -24,20 +27,22 @@ func play():
 	#Input.set_custom_mouse_cursor(cursor, Input.CURSOR_ARROW, Vector2(16,16))
 	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
+func toggle():
+	if !is_visible():
+		pause()
+	else:
+		play()
+
 func _process(delta):
 	if Input.is_action_just_pressed("ui_cancel"):
 		print("hello")
-		if !is_visible():
-			pause()
-		else:
-			play()
+		toggle()
 
 func _on_Resume_pressed():
 	play()
 
-func _on_MainMenu_pressed():
-	get_tree().change_scene("res://ui/MainMenu.tscn")
-	get_tree().paused = false
+func _on_Volume_value_changed(value):
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), value)
 
-func _on_Quit_pressed():
-	get_tree().quit()
+func _on_Fullscreen_toggled(button_pressed):
+	OS.window_fullscreen = button_pressed

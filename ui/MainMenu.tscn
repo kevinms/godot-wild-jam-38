@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://buildings/Building1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ui/Door.tscn" type="PackedScene" id=2]
@@ -20,6 +20,7 @@
 [ext_resource path="res://fonts/SmallText.tres" type="DynamicFont" id=18]
 [ext_resource path="res://ui/MainMenu.gd" type="Script" id=19]
 [ext_resource path="res://ui/HudHelpFont.tres" type="DynamicFont" id=20]
+[ext_resource path="res://ui/SettingsPanel.tscn" type="PackedScene" id=21]
 
 [sub_resource type="OpenSimplexNoise" id=1]
 seed = 2
@@ -149,8 +150,10 @@ __meta__ = {
 [node name="ZeButtons" type="Node2D" parent="Camera2D"]
 z_index = 4096
 z_as_relative = false
+script = ExtResource( 9 )
 
 [node name="SettingsButton" type="Button" parent="Camera2D/ZeButtons"]
+pause_mode = 2
 process_priority = -7
 margin_left = 319.797
 margin_top = -258.959
@@ -158,12 +161,12 @@ margin_right = 391.797
 margin_bottom = -227.959
 custom_fonts/font = ExtResource( 7 )
 text = "Settings"
-script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="QuitButton" type="Button" parent="Camera2D/ZeButtons"]
+pause_mode = 2
 process_priority = -7
 margin_left = 407.106
 margin_top = -258.959
@@ -171,12 +174,15 @@ margin_right = 479.106
 margin_bottom = -227.959
 custom_fonts/font = ExtResource( 7 )
 text = "Quit"
-script = ExtResource( 9 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="SettingsPanel" parent="Camera2D/ZeButtons" instance=ExtResource( 21 )]
+visible = false
+
 [node name="Music" type="AudioStreamPlayer" parent="."]
+pause_mode = 2
 stream = ExtResource( 12 )
 volume_db = -16.0
 autoplay = true
@@ -424,9 +430,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="HintWindTurbine" parent="EasyMode" instance=ExtResource( 6 )]
-position = Vector2( 488.411, 466.419 )
-
 [node name="HardMode" type="Node2D" parent="."]
 
 [node name="HardModeDir" type="Label" parent="HardMode"]
@@ -573,5 +576,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Camera2D/ZeButtons/SettingsButton" to="Camera2D/ZeButtons/SettingsButton" method="_on_SettingsButton_pressed"]
-[connection signal="pressed" from="Camera2D/ZeButtons/QuitButton" to="Camera2D/ZeButtons/QuitButton" method="_on_QuitButton_pressed"]
+[connection signal="pressed" from="Camera2D/ZeButtons/SettingsButton" to="Camera2D/ZeButtons" method="_on_SettingsButton_pressed"]
+[connection signal="pressed" from="Camera2D/ZeButtons/QuitButton" to="Camera2D/ZeButtons" method="_on_QuitButton_pressed"]
