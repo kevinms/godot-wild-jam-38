@@ -325,7 +325,7 @@ respawn = true
 position = Vector2( 805.464, -838.67 )
 
 [node name="Sprite2" type="Sprite" parent="BalloonTown"]
-position = Vector2( 803.862, -1013.39 )
+position = Vector2( 803.442, -1009.5 )
 texture = ExtResource( 3 )
 
 [node name="EasyMode" type="Node2D" parent="."]
