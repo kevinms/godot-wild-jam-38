@@ -272,6 +272,35 @@ __meta__ = {
 [node name="Starting Building" parent="." instance=ExtResource( 1 )]
 position = Vector2( -87.1353, 537.739 )
 
+[node name="BalloonTown" type="Node2D" parent="."]
+
+[node name="Balloon9" parent="BalloonTown" instance=ExtResource( 15 )]
+position = Vector2( 713.252, -201.003 )
+respawn = true
+
+[node name="Balloon10" parent="BalloonTown" instance=ExtResource( 15 )]
+position = Vector2( 1128.39, -371.862 )
+respawn = true
+
+[node name="Balloon11" parent="BalloonTown" instance=ExtResource( 15 )]
+position = Vector2( 410.243, -548.061 )
+respawn = true
+
+[node name="Balloon12" parent="BalloonTown" instance=ExtResource( 15 )]
+position = Vector2( 1279.22, -307.79 )
+respawn = true
+
+[node name="Balloon13" parent="BalloonTown" instance=ExtResource( 15 )]
+position = Vector2( 35.1533, -290.437 )
+respawn = true
+
+[node name="Building3" parent="BalloonTown" instance=ExtResource( 5 )]
+position = Vector2( 805.464, -838.67 )
+
+[node name="Sprite2" type="Sprite" parent="BalloonTown"]
+position = Vector2( 803.862, -1013.39 )
+texture = ExtResource( 3 )
+
 [node name="EasyMode" type="Node2D" parent="."]
 
 [node name="HelpDoubleJump" type="Label" parent="EasyMode"]

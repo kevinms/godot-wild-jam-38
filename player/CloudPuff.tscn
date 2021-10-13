@@ -1,0 +1,41 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://player/CloudPuff.gd" type="Script" id=1]
+[ext_resource path="res://player/CloudPuff.png" type="Texture" id=2]
+
+[sub_resource type="CanvasItemMaterial" id=2]
+
+[sub_resource type="Gradient" id=3]
+colors = PoolColorArray( 1, 1, 1, 0.690196, 0.905882, 0.909804, 0.807843, 0.631373 )
+
+[sub_resource type="GradientTexture" id=4]
+gradient = SubResource( 3 )
+
+[sub_resource type="Curve" id=5]
+_data = [ Vector2( 0, 1 ), 0.0, 0.0, 0, 0, Vector2( 1, 0 ), -1.40581, 0.0, 0, 0 ]
+
+[sub_resource type="CurveTexture" id=6]
+curve = SubResource( 5 )
+
+[sub_resource type="ParticlesMaterial" id=1]
+emission_shape = 1
+emission_sphere_radius = 1.0
+flag_disable_z = true
+direction = Vector3( 0, -1, 0 )
+spread = 52.32
+gravity = Vector3( 0, 20, 0 )
+initial_velocity = 45.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 100.0
+scale = 0.3
+scale_curve = SubResource( 6 )
+color_ramp = SubResource( 4 )
+
+[node name="CloudPuff" type="Particles2D"]
+material = SubResource( 2 )
+explosiveness = 0.95
+local_coords = false
+process_material = SubResource( 1 )
+texture = ExtResource( 2 )
+script = ExtResource( 1 )

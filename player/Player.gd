@@ -17,6 +17,7 @@ var freeze = false
 
 onready var camera = Global.get_camera()
 onready var GrappleGun = $Node2D/GrappleGun
+onready var puff_scene = preload("res://player/CloudPuff.tscn")
 
 func _ready():
 	#$JumpSound.register_sound(preload("res://sfx/Jump1.mp3"))
@@ -30,6 +31,12 @@ func _ready():
 func on_windturbine_hit():
 	velocity = (Vector2.RIGHT + Vector2.UP) * 1000.0
 	$AnimationTree.set("parameters/action/current",8)
+
+func spawn_cloud_puff():
+	var puff = puff_scene.instance()
+	#Global.get_base_node().add_child(puff)
+	#puff.global_position = $PuffSpawn.global_position
+	$PuffSpawn.add_child(puff)
 
 func portal_warp():
 	freeze = true
@@ -133,6 +140,7 @@ func _process(delta):
 			# Up and to the dir
 			velocity += (dir*0.3 + Vector2.UP).normalized() * JUMP_SPEED
 			$JumpSound.play()
+			spawn_cloud_puff()
 			#camera.add_trauma(0.2)
 		elif is_on_wall():
 			$AnimationTree.set("parameters/action/current",4)
@@ -144,6 +152,7 @@ func _process(delta):
 			var jump_dir = Vector2.UP + wall_normal * 0.3
 			velocity = WALL_JUMP_SPEED * jump_dir
 			$JumpSound.play()
+			spawn_cloud_puff()
 			#camera.add_trauma(0.2)
 		elif Input.is_action_just_pressed("jump") and air_jumps_left > 0:
 			$AnimationTree.active = false
@@ -152,6 +161,7 @@ func _process(delta):
 			print("on air")
 			velocity.y = min(0, velocity.y) - JUMP_SPEED
 			$JumpSound.play()
+			#spawn_cloud_puff()
 			air_jumps_left -= 1
 
 

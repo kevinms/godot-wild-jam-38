@@ -2338,3 +2338,6 @@ skeleton = NodePath("../../Skeleton2D")
 polygon = PoolVector2Array( 321, 988, 351, 975, 351, 933, 349, 788, 325, 777, 297, 785, 297.865, 861.958, 299, 963, 302, 983 )
 uv = PoolVector2Array( 321, 988, 351, 975, 351, 933, 349, 788, 325, 777, 297, 785, 297.865, 861.958, 299, 963, 302, 983 )
 bones = [ NodePath("Torso"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/LeftArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/LeftArm/LeftFormArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightLeg"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightLeg/RightCalf"), PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1 ), NodePath("Torso/RightArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/RightArm/RightForeArm"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/LeftLeg"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0 ), NodePath("Torso/LeftLeg/LeftCalf"), PoolRealArray( 0, 0, 0, 0, 0, 0, 0, 0, 0 ) ]
+
+[node name="PuffSpawn" type="Node2D" parent="."]
+position = Vector2( -2.20735, 12.8237 )
