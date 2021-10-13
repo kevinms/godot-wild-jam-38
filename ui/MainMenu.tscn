@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://buildings/Building1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ui/Door.tscn" type="PackedScene" id=2]
@@ -97,6 +97,9 @@ size = 64
 outline_size = 2
 outline_color = Color( 0, 0, 0, 1 )
 font_data = ExtResource( 16 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 32.0972, 31.9835 )
 
 [node name="MainMenu" type="Node2D"]
 script = ExtResource( 19 )
@@ -324,9 +327,16 @@ respawn = true
 [node name="Building3" parent="BalloonTown" instance=ExtResource( 5 )]
 position = Vector2( 805.464, -838.67 )
 
-[node name="Sprite2" type="Sprite" parent="BalloonTown"]
+[node name="GodotIcon" type="StaticBody2D" parent="BalloonTown"]
 position = Vector2( 803.442, -1009.5 )
+collision_layer = 2
+collision_mask = 3
+
+[node name="Sprite2" type="Sprite" parent="BalloonTown/GodotIcon"]
 texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="BalloonTown/GodotIcon"]
+shape = SubResource( 11 )
 
 [node name="EasyMode" type="Node2D" parent="."]
 
