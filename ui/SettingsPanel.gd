@@ -3,10 +3,10 @@ extends Node2D
 var paused = false
 
 #TODO: switch from custom mouse cursor to always centered cursor
-#onready var cursor = preload("res://assets/cursor/cursor.png")
+onready var cursor = preload("res://ui/cursor.png")
 
 func _ready():
-	#Input.set_custom_mouse_cursor(cursor, Input.CURSOR_ARROW, Vector2(16,16))
+	#Input.set_custom_mouse_cursor(cursor, Input.CURSOR_ARROW, Vector2(1,1))
 	#Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	$Panel/Settings/Fullscreen.pressed = OS.window_fullscreen
 	$Panel/Settings/Volume.value = AudioServer.get_bus_volume_db(AudioServer.get_bus_index("Master"))
