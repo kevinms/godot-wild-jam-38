@@ -184,7 +184,7 @@ visible = false
 [node name="Music" type="AudioStreamPlayer" parent="."]
 pause_mode = 2
 stream = ExtResource( 12 )
-volume_db = -16.0
+volume_db = -8.0
 autoplay = true
 
 [node name="DeathSound" type="AudioStreamPlayer" parent="."]

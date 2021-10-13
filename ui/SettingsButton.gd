@@ -5,3 +5,4 @@ func _on_QuitButton_pressed():
 
 func _on_SettingsButton_pressed():
 	$SettingsPanel.toggle()
+	$SettingsButton.release_focus()
