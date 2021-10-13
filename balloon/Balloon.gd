@@ -17,7 +17,7 @@ func reset():
 	$BalloonArea.collision_layer = initial_collision_layer
 	$BalloonArea.collision_mask = initial_collision_mask
 	popped = false
-	
+	$AnimationTree.set("parameters/transition/current",0)
 	global_position = initial_position
 	velocity = Vector2.ZERO
 
@@ -25,6 +25,8 @@ func _process(delta):
 	if popped:
 		velocity += Vector2.DOWN * GRAVITY * delta
 		velocity = move_and_slide(velocity, Vector2.UP, false)
+		if get_slide_count() > 0:
+			$AnimationTree.set("parameters/transition/current",1)
 		#collision = move_and_collide(velocity)
 
 func _on_BalloonArea_body_entered(body: Node):
