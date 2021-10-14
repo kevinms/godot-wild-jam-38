@@ -47,22 +47,22 @@ func do_game_over():
 	yield(get_tree().create_timer(1.0), "timeout")
 	$Camera2D/GameOver.visible = true
 
-var dist_to_next_level = 2000
-var final_level = false
-func transition_level():
-	if final_level:
-		return
-	match Global.level_mode:
-		0:
-			# Transition to hard mode
-			if Global.get_feet() > dist_to_next_level:
-				Global.level_mode = 1
-				dist_to_next_level += 2000
-				show_difficulty()
-		1:
-			if Global.get_feet() > dist_to_next_level:
-				$Camera2D/Billboard.display("Solar Panels Cleaned! Endless Mode", 4.0)
-				final_level = true
+#var dist_to_next_level = 2000
+#var final_level = false
+#func transition_level():
+#	if final_level:
+#		return
+#	match Global.level_mode:
+#		0:
+#			# Transition to hard mode
+#			if Global.get_feet() > dist_to_next_level:
+#				Global.level_mode = 1
+#				dist_to_next_level += 2000
+#				show_difficulty()
+#		1:
+#			if Global.get_feet() > dist_to_next_level:
+#				$Camera2D/Billboard.display("Solar Panels Cleaned! Endless Mode", 4.0)
+#				final_level = true
 
 func move_camera(delta: float):
 	var view_size = Vector2(ProjectSettings.get("display/window/size/width"), ProjectSettings.get("display/window/size/height"))
@@ -75,7 +75,7 @@ func move_camera(delta: float):
 	player_pos.x += view_size.x/5
 	
 	# Transition level based on distance
-	transition_level()
+	#transition_level()
 	
 	#TODO: increase camera speed over time, but set a limit so players can go infinite
 	var camera_speed_mod = clamp(((int(Global.get_feet()) - 2000)/2000) + 1,1,2)

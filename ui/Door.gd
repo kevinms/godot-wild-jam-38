@@ -5,10 +5,20 @@ export(int) var level_mode = 0
 
 var collapsing = false
 
-func _read():
-	$AnimationPlayer.play("worble")
-	$AnimationPlayer.stop(true)
-	$AnimationPlayer.seek(0, true)
+func _ready():
+	#$AnimationPlayer.play("worble")
+	#$AnimationPlayer.stop(true)
+	#$AnimationPlayer.seek(0, true)
+	
+	$AnimationPlayer.play_backwards("worble")
+	
+	match level_mode:
+		0:
+			$HelpDifficulty.text = "Easy"
+		1:
+			$HelpDifficulty.text = "Hard"
+		2:
+			$HelpDifficulty.text = "Spidey"
 
 func _process(delta):
 	if !has_player:

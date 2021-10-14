@@ -13,6 +13,9 @@ var player_moved = false
 signal player_died
 signal windturbine_hit
 
+# Args: (text, seconds)
+signal update_billboard
+
 func reset():
 	game_over = false
 	
@@ -22,6 +25,9 @@ func reset():
 	clean = 0
 	playerStartingPosition = 0
 	player_moved = false
+
+func update_billboard(text, seconds):
+	emit_signal("update_billboard", text, seconds)
 
 func get_feet():
 	return (Global.distance - Global.playerStartingPosition) / 12

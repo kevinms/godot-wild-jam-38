@@ -1,8 +1,10 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://ui/Door.gd" type="Script" id=1]
 [ext_resource path="res://ui/portal.png" type="Texture" id=2]
 [ext_resource path="res://ui/DoorEffect.gdshader" type="Shader" id=3]
+[ext_resource path="res://ui/HudHelpFont.tres" type="DynamicFont" id=4]
+[ext_resource path="res://fonts/SmallText.tres" type="DynamicFont" id=5]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 27.6263, 39.9274 )
@@ -99,6 +101,29 @@ anims/worble = SubResource( 6 )
 [node name="WorbleSound" type="AudioStreamPlayer" parent="."]
 
 [node name="Tween" type="Tween" parent="."]
+
+[node name="HelpDifficulty" type="Label" parent="."]
+margin_left = -105.202
+margin_top = -68.178
+margin_right = 106.798
+margin_bottom = 57.822
+custom_fonts/font = ExtResource( 4 )
+text = "Easy"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HelpDoorTip" type="Label" parent="."]
+margin_left = -24.9806
+margin_top = -49.198
+margin_right = 187.019
+margin_bottom = 76.802
+custom_fonts/font = ExtResource( 5 )
+text = "Jump to enter"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="body_entered" from="." to="." method="_on_Door_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_Door_body_exited"]

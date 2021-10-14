@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://buildings/Building1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ui/Door.tscn" type="PackedScene" id=2]
@@ -17,7 +17,6 @@
 [ext_resource path="res://balloon/Balloon.tscn" type="PackedScene" id=15]
 [ext_resource path="res://fonts/Seshat.otf" type="DynamicFontData" id=16]
 [ext_resource path="res://sfx/FallDeath.mp3" type="AudioStream" id=17]
-[ext_resource path="res://fonts/SmallText.tres" type="DynamicFont" id=18]
 [ext_resource path="res://ui/MainMenu.gd" type="Script" id=19]
 [ext_resource path="res://ui/HudHelpFont.tres" type="DynamicFont" id=20]
 [ext_resource path="res://ui/SettingsPanel.tscn" type="PackedScene" id=21]
@@ -418,28 +417,6 @@ position = Vector2( 1239.3, 597.551 )
 [node name="DoorEasy" parent="EasyMode" instance=ExtResource( 2 )]
 position = Vector2( 1241.04, 407.745 )
 
-[node name="HelpEasy" type="Label" parent="EasyMode"]
-margin_left = 1228.16
-margin_top = 337.747
-margin_right = 1440.16
-margin_bottom = 463.747
-custom_fonts/font = ExtResource( 20 )
-text = "Easy"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HelpDoorTip" type="Label" parent="EasyMode"]
-margin_left = 1217.77
-margin_top = 356.609
-margin_right = 1429.77
-margin_bottom = 482.609
-custom_fonts/font = ExtResource( 18 )
-text = "Jump to enter"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="HardMode" type="Node2D" parent="."]
 
 [node name="HardModeDir" type="Label" parent="HardMode"]
@@ -483,28 +460,6 @@ position = Vector2( 3005.69, 434.982 )
 [node name="DoorHard" parent="HardMode" instance=ExtResource( 2 )]
 position = Vector2( 3004.04, 247.625 )
 level_mode = 1
-
-[node name="HelpHard" type="Label" parent="HardMode"]
-margin_left = 2989.89
-margin_top = 180.755
-margin_right = 3201.89
-margin_bottom = 306.755
-custom_fonts/font = ExtResource( 20 )
-text = "Hard"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HelpDoorTip2" type="Label" parent="HardMode"]
-margin_left = 2982.2
-margin_top = 199.664
-margin_right = 3194.2
-margin_bottom = 325.664
-custom_fonts/font = ExtResource( 18 )
-text = "Jump to enter"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="SpideyMode" type="Node2D" parent="."]
 
@@ -563,28 +518,6 @@ rotation = -3.14159
 [node name="DoorSpidey" parent="SpideyMode" instance=ExtResource( 2 )]
 position = Vector2( 5556.55, 250.527 )
 level_mode = 2
-
-[node name="HelpSpidey" type="Label" parent="SpideyMode"]
-margin_left = 5535.47
-margin_top = 182.204
-margin_right = 5747.48
-margin_bottom = 308.204
-custom_fonts/font = ExtResource( 20 )
-text = "Spidey"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HelpDoorTip3" type="Label" parent="SpideyMode"]
-margin_left = 5533.47
-margin_top = 202.877
-margin_right = 5745.47
-margin_bottom = 328.877
-custom_fonts/font = ExtResource( 18 )
-text = "Jump to enter"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [connection signal="pressed" from="Camera2D/ZeButtons/SettingsButton" to="Camera2D/ZeButtons" method="_on_SettingsButton_pressed"]
 [connection signal="pressed" from="Camera2D/ZeButtons/QuitButton" to="Camera2D/ZeButtons" method="_on_QuitButton_pressed"]

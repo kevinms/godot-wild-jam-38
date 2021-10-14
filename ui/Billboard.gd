@@ -2,7 +2,7 @@ extends Node2D
 
 func _ready():
 	#visible = false
-	pass
+	Global.connect("update_billboard", self, "display")
 
 onready var initial_pos = $Board.position
 

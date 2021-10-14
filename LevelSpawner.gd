@@ -12,8 +12,10 @@ var building_sizes = []
 
 onready var balloon_scene = preload("res://balloon/Balloon.tscn")
 onready var windturbine_scene = preload("res://windturbine/WindTurbine.tscn")
+onready var door_scene = preload("res://ui/Door.tscn")
 
 var objects = []
+var level_complete = false
 
 export(NodePath) var camera_path
 onready var camera: Camera2D = get_node(camera_path)
@@ -41,13 +43,33 @@ func randomly_place_balloons(pos: Vector2, miny=-200, maxy=-300) -> Node2D:
 	
 	return balloon
 
+var till_next_door = 0
+func should_spawn_door():
+	if !level_complete or Global.level_mode > 1:
+		return
+	
+	if till_next_door <= 0:
+		till_next_door = 10
+		return true
+	
+	till_next_door -= 1
+	return false
+
 func spawn_building(pos: Vector2, windturbine: bool) -> Node2D:
 	var index = randi() % building_scenes.size()
 	var building = building_scenes[index].instance()
 	var building_size = building.get_size_in_pixels()
 	
+	# Door to next level
+	var spawn_door = false
+	var door_pos = Vector3.ZERO
+	if should_spawn_door():
+		spawn_door = true
+		door_pos = pos
+		#Note: defer creating door, but check here so windturbine isn't created
+	
 	# Turbine
-	if windturbine:
+	elif windturbine:
 		var turbine = windturbine_scene.instance()
 		add_child(turbine)
 		turbine.global_position = pos
@@ -56,6 +78,13 @@ func spawn_building(pos: Vector2, windturbine: bool) -> Node2D:
 	
 	add_child(building)
 	building.global_position = pos
+	
+	# Add the door last so it's rendered on top
+	if spawn_door:
+		var door = door_scene.instance()
+		door.level_mode = Global.level_mode + 1
+		add_child(door)
+		door.global_position = door_pos + Vector2.UP * 50
 	
 	return building
 
@@ -131,6 +160,25 @@ func generate_object():
 	
 	object = spawn_building(pos, has_turbine)
 
+func check_level_complete():
+	if level_complete:
+		return
+	match Global.level_mode:
+		0:
+			if Global.get_feet() > 2000:
+				level_complete = true
+				Global.update_billboard("Easy Mode Complete", 4.0)
+				#$Camera2D/Billboard.display("Easy Mode Complete", 4.0)
+		1:
+			if Global.get_feet() > 2000:
+				level_complete = true
+				Global.update_billboard("Hard Mode Complete", 4.0)
+				#$Camera2D/Billboard.display("Hard Mode Complete", 4.0)
+		2:
+			if Global.get_feet() > 2000:
+				level_complete = true
+				Global.update_billboard("Spidey Mode Complete", 4.0)
+
 func _ready():
 	#var building = building_scenes[0].instance()
 	#building_sizes.append(building.get_size_in_pixels())
@@ -146,6 +194,8 @@ func _process(delta):
 	
 	var screenEdge = camera.get_camera_screen_center() + view_size / 2
 	#screenEdge = $Camera2D.get_camera_screen_center()
+	
+	check_level_complete()
 	
 	if pos < screenEdge:
 		#randomly_place_building()
